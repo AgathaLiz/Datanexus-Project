@@ -1,0 +1,18 @@
+body, html {
+  
+    margin: 0;
+}
+.conteiner {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    text-align: center;
+}
+.content {
+    width: 50%; /* Largura do contêiner */
+    padding: 20px;
+}
+img {
+    width: 100px;
+   
+}
