@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800|Roboto:400,700,900&display=swap');
 body, html {
-  
     margin: 0;
 }
 .conteiner {
@@ -12,7 +12,76 @@ body, html {
     width: 50%; /* Largura do contêiner */
     padding: 20px;
 }
-img {
-    width: 100px;
-   
+.container {
+    display: flex;
+    height: 100vh;
+    background-image: url(img/misurina-sunset.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;   
+
 }
+.info-boxer {
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    display: flexbox;
+}
+
+.logo {
+    width: 80px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #4c07a0;
+    margin: 0 0 10px;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+form[name="seguro_form"]{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+form[name="seguro_form"]label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form[name="seguro_form"] input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form[name="seguro_form"]button {
+    width: 100%;
+    padding: 12px;
+    background-color: #be50fd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form[name="seguro_form"] button:hover {
+    background-color: #88e3f5; }
