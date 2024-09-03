@@ -2,15 +2,19 @@
 <html>
     <head> 
         <link rel="stylesheet" href="seguro.css">
+        <script src ="seguro.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="img/favicon-32x32.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://unpkg.com/vanilla-masker/build/vanilla-masker.min.js"></script>
+
 
       <title>Seguro Viagem: online, rápido e seguro!</title>
     </head>
     <body>
         <header>
-          <nav></nav>
+          <nav>
            <div class="conteiner">
             <div class="content">
               <img src="img/header.png" alt="DataNexus Tech">
@@ -32,32 +36,64 @@
              </section>
            <div class="form-container">
              <form name="seguro_form" action="/" method="post">
-                 <label>Qual seu destino</label>
-                <input type="text" placeholder="Selecione seu destino">
 
-                <label>Data da Viagem:</label>
+              <label for="destino">Escolha o seu Destino: </label>
+              <input list="destino-list" id="destino" name="destino" placeholder="Selecione seu destino">
+              <datalist id="destino-list">
+                <option value="EUA e Canada">
+                <option value="Europa">
+                <option value="América Latina">
+                <option value="Ásia">
+                <option value="IAI">
+              </datalist>
+
+                <label>Data da Viagem:</br>
+                  Ida
+                </label>
                 <input type="date" placeholder="Embarque">
+                <label>Volta: </label>
                 <input type="date" placeholder="Chegada">
 
-                <label>Idade do(s) passageiro(s):</label>
-                <input type="text" placeholder="Selecione">
+                <label for="idade">Idade do(s) passageiro(s):</label>
+                <input list="idade-list" id="idade" name="idade"  placeholder="Selecione">
+                <datalist id="idade-list">
+                  <option value="0 a 40 anos">
+                  <option value="40 a 60 anos">
+                  <option value="61 a 74 anos">
+                  <option value="74 a 90 anos">
+                  <option value="90 a 9000000 anos">
+                </datalist>
 
-                <label>Nome e sobrenome:</label>
-                <input type="text" placeholder="Ex: Agatha Liz Marques">
+                <label>Nome:</label>
+                <input type="text" placeholder="Ex: Agatha Liz ">
 
-                <label>seu melhor E-mail:</label>
-                <input type="email" placeholder="Ex: agatha@datanex.com">
+                <label>Último nome:</label>
+                <input type="text" placeholder="Ex: Marques" >
+
+
+                <label id="result">seu melhor E-mail:</label>
+                <input id="email" type="email" placeholder="Ex: agatha@datanex.com">
 
                 <label>Telefone:</label>
-                <input type="tel" placeholder="Ex: (13) 3456-7891">
+                <input type="text" id="tel" placeholder="Ex: (13) 3456-7891"  maxlength="16" size="16" >
 
-                <button type="submit">COTAR AGORA!</button>
+                <button id="button" type="submit">COTAR AGORA!</button>
             </form>
            </div>
           </div>
         </div>
+        <nav class="menu">
+          <ul>
+             <li><a href="#">Vantagens</a></li>
+             <li><a href="#">Produtos</a></li>
+             <li><a href="#">pacotes</a></li>
+             <li><a href="#">lorem</a></li>
+             <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
         </main>
         <footer>
+            
         </footer>
     </body>
 </html>
