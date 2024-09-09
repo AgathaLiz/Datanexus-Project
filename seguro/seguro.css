@@ -169,13 +169,23 @@ body, html {
     height: 100%;
 }
 .menu li {
-    display: inline;
-    margin-left: 100px;
+    width: 100%;
+    background-color: rgba(162, 45, 235, 0.274);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.481); /* Efeito de sombra */
+    display: flex; /* Alinhamento horizontal dos itens */
+    justify-content: center; /* Centraliza os itens */
+    padding: 10px 0; /* Espaçamento vertical */
     align-items: center;
-    text-align: center;
-    margin-top: 100px;
-    color: #4c07a0;
 }
+.menu a {
+    color: #333; /* Cor do texto */
+    margin: 0 20px; /* Espaçamento entre os itens */
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-family: Georgia, 'Times New Roman', Times, serif/* Fonte */
+}
+.menu a:hover {
+    color: #037366; /* Cor do texto ao passar o mouse */
+    border-bottom: 2px solid #00cc9d70; /* Linha inferior */ }
 
 .info-boxer {
     background: rgba(255, 255, 255, 0.116); /* Fundo branco semi-transparente */
@@ -199,6 +209,10 @@ h1 {
 p {
     margin: 10px 0;
     line-height: 1.6;
+}
+#p1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color-scheme: var(--cor3);
 }
 .form-container {
     width: 100%;
@@ -462,7 +476,7 @@ form[name="seguro_form"] button:hover {
     
     #bb {
     
-        background: url(../../../Imagens/bb.teste.webp) no-repeat;
+        background: url(img/Imagens/bb.teste.webp) no-repeat;
         width: 85px;
         height: 55px;
         color: transparent;
@@ -471,7 +485,7 @@ form[name="seguro_form"] button:hover {
     
     #bradesco {
     
-        background: url(../../../Imagens/bradescoteste.webp) no-repeat;
+        background: url(img/Imagens/bradescoteste.webp) no-repeat;
         width: 85px;
         height: 55px;
         color: transparent;
@@ -480,7 +494,7 @@ form[name="seguro_form"] button:hover {
     
     #caixa {
     
-        background: url(../../../Imagens/caixa.teste.webp) no-repeat;
+        background: url(img/Imagens/caixa.teste.webp) no-repeat;
         width: 85px;
         height: 55px;
         color: transparent;
@@ -489,7 +503,7 @@ form[name="seguro_form"] button:hover {
     
     #elo {
     
-        background: url(../../../Imagens/elo.teste.webp) no-repeat;
+        background: url(img/Imagens/elo.teste.webp) no-repeat;
         width: 85px;
         height: 55px;
         color: transparent;
@@ -498,7 +512,7 @@ form[name="seguro_form"] button:hover {
     
     #itau {
     
-        background: url(../../../Imagens/itau.teste.webp) no-repeat;
+        background: url(img/Imagens/itau.teste.webp) no-repeat;
         width: 85px;
         height: 55px;
         color: transparent;
@@ -507,7 +521,7 @@ form[name="seguro_form"] button:hover {
     
     #mastercard {
     
-        background: url(../../../Imagens/mastercardteste.webp) no-repeat;
+        background: url(img/Imagens/mastercardteste.webp) no-repeat;
         width: 85px;
         height: 55px;
         color: transparent;
@@ -516,7 +530,7 @@ form[name="seguro_form"] button:hover {
     
     #pix {
     
-        background: url(../../../Imagens/pix.teste.webp) no-repeat;
+        background: url(img/Imagens/pix.teste.webp) no-repeat;
         width: 85px;
         height: 55px;
         color: transparent;
@@ -525,7 +539,7 @@ form[name="seguro_form"] button:hover {
     
     #santader {
     
-        background: url(../../../Imagens/santander.teste.webp) no-repeat;
+        background: url(img/Imagens/santander.teste.webp) no-repeat;
         width: 85px;
         height: 55px;
         color: transparent;
@@ -534,7 +548,7 @@ form[name="seguro_form"] button:hover {
     
     #visa {
     
-        background: url(../../../Imagens/visa.teste.webp) no-repeat;
+        background: url(img/Imagens/visa.teste.webp) no-repeat;
         width: 85px;
         height: 55px;
         color: transparent;
@@ -550,7 +564,7 @@ form[name="seguro_form"] button:hover {
     
     #instagram {
     
-        background: url(../../../Imagens/logo-insta.webp) no-repeat;
+        background: url(img/Imagens/logo-insta.webp) no-repeat;
         width: 100px;
         height: 50px;
         color: transparent;
@@ -559,7 +573,7 @@ form[name="seguro_form"] button:hover {
     
     #facebook {
     
-        background: url(../../../Imagens/logo-facebook.webp) no-repeat;
+        background: url(img/Imagens/logo-facebook.webp) no-repeat;
         width: 100px;
         height: 50px;
         color: transparent;
@@ -568,7 +582,7 @@ form[name="seguro_form"] button:hover {
     
     #twitter {
     
-        background: url(../../../Imagens/logo-twitter.webp) no-repeat;
+        background: url(img/Imagens/logo-twitter.webp) no-repeat;
         width: 100px;
         height: 50px;
         color: transparent;
@@ -577,7 +591,7 @@ form[name="seguro_form"] button:hover {
     
     #tiktok {
     
-        background: url(../../../Imagens/logo-tiktok.webp) no-repeat;
+        background: url(img/Imagens/logo-tiktok.webp) no-repeat;
         width: 100px;
         height: 50px;
         color: transparent;
@@ -586,7 +600,7 @@ form[name="seguro_form"] button:hover {
     
     #youtube {
     
-        background: url(../../../Imagens/logo-youtube.webp) no-repeat;
+        background: url(img/Imagens/logo-youtube.webp) no-repeat;
         width: 100px;
         height: 50px;
         color: transparent;
