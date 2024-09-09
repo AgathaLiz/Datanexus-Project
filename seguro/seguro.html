@@ -14,13 +14,36 @@
     </head>
     <body>
         <header>
-          <nav>
-           <div class="conteiner">
-            <div class="content">
-              <img src="img/header.png" alt="DataNexus Tech">
+          <header>
+
+            <div class="logo">Data Nexus</div>
+        
+            <div class="hamburguer">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-           </div>
-        </nav>
+        
+            <nav class="nav_bar">
+                <ul>
+                    <li>
+                        <a href="" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Acessar minha conta</a>
+                    </li>
+                    <li>
+                        <a href="">Meus Pedidos</a>
+                    </li>
+                    <li>
+                        <a href="../Central de Ajuda/central_de_ajuda.html">Central de Ajuda</a>
+                    </li>
+                    <li>
+                        <a href="../Quem Somos/Quem somos.html">Quem somos</a>
+                    </li>
+                  </ul>
+            </nav>
+        </header>
         </header>
         <main>
           <div class="container">
@@ -35,7 +58,7 @@
                <h1>.</h1>
              </section>
            <div class="form-container">
-             <form name="seguro_form" action="/" method="post">
+             <form name="seguro_form">
 
               <label for="destino">Escolha o seu Destino: </label>
               <input list="destino-list" id="destino" name="destino" placeholder="Selecione seu destino">
@@ -64,20 +87,24 @@
                   <option value="90 a 9000000 anos">
                 </datalist>
 
-                <label>Nome:</label>
-                <input type="text" placeholder="Ex: Agatha Liz ">
-
-                <label>Último nome:</label>
-                <input type="text" placeholder="Ex: Marques" >
-
-
-                <label id="result">seu melhor E-mail:</label>
-                <input id="email" type="email" placeholder="Ex: agatha@datanex.com">
-
-                <label>Telefone:</label>
-                <input type="text" id="tel" placeholder="Ex: (13) 3456-7891"  maxlength="16" size="16" >
-
-                <button id="button" type="submit">COTAR AGORA!</button>
+                <form name="seguro_form1" action="/" method="post">
+                  <label>Digite seu CPF:</label>
+                  <input type="text" id="cpf" placeholder="Ex: 000.000.000-00 " maxlength="11" size="11" name ="campo1">
+               
+                  <label>Nome:</label>
+                  <input type="text" placeholder="Ex: Agatha Liz " name= "campo2">
+               
+                  <label>Último nome:</label>
+                  <input type="text" placeholder="Ex: Marques" name="campo3">
+               
+               
+                  <label for="emaili">seu melhor E-mail:</label>
+                  <input id="emailI" type="email" placeholder="Ex: agatha@datanex.com" name="campo4">
+               
+                  <label>Telefone:</label>
+                  <input type="text" id="tel" placeholder="Ex: (13) 3456-7891"  maxlength="16" size="16" name= "campo5" >
+          
+                  <button id="button" onclick="yag()" >COTAR AGORA!</button>
             </form>
            </div>
           </div>
@@ -93,7 +120,54 @@
         </nav>
         </main>
         <footer>
-            
+            <nav>
+        
+              <ul id="lista_maislinks">
+        
+                <li class="links"><a href="../Quem Somos/Quem somos.html">Quem somos</a></li>
+                <li class="links"><a href="#">Política e Privacidade</a></li>
+                <li class="links"><a href="#">Termos e Condições</a></li>
+                <li class="links"><a href="#">Regras de remarcação, cancelamento e reembolso</a></li>
+                <li class="links"><a href="#">Trabalhe Conosco</a></li>
+        
+              </ul>
+        
+            </nav>
+        
+            <div class="parte_do_pagamento">
+        
+              <h2 id="formasdepagamento">Formas de Pagamento</h2>
+        
+                <ul class="lista_geral", class="links_outros">
+        
+                <li id="bb">bradesco</li>
+                <li id="bradesco">MasterCard</li>
+                <li id="caixa">MasterCard</li>
+                <li id="elo">MasterCard</li>
+                <li id="itau">MasterCard</li>
+                <li id="mastercard">MasterCard</li>
+                <li id="pix">MasterCard</li>
+                <li id="santader">MasterCard</li>
+                <li id="visa">MasterCard</li>
+        
+              <p class="parag_rodape"> Pague no cartão de crédito até 12X com juros, boleto à vista ou parcelado, ou com pix!</p>
+                </ul>
+            </div>
+            <div class="parte_do_siga">
+        
+            <p class="parag_rodape"> A DataNexus oferece as melhre passagens e viagens para onde você quiser ir com o preço acessível. Viaje conosco!</p>
+        
+            <h3 id="sigatitulo">Siga-nos</h3>
+        
+            <ul class="lista_geral", class="links_outros">
+              <li class="links_outros"><a id="instagram" href="https://www.instagram.com/datanexustech/?igsh=MWI2OTBrNDBmeWJ2bg%3D%3D">instagram</a></li>
+              <li class="links_outros"><a id="facebook" href="Imagens/logo-facebook.webp">facebook</a></li>
+              <li class="links_outros"><a id="twitter" href="Imagens/logo-twitter.webp">twitter</a></li>
+              <li class="links_outros"><a id="tiktok" href="Imagens/logo-tiktok.webp">tiktok</a> </li>
+              <li class="links_outros"><a id="youtube" href="Imagens/logo-youtube.webp">youtube</a></li>
+            </ul>
+           </div>
+            <p id="p1">Caso o tamanho da janela seja menor que 800px, automaticamente tera um votao para o usuário</p>
         </footer>
     </body>
 </html>
