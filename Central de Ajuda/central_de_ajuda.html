@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Central de Ajuda/Central de Ajuda_css/header_css.css.css">
-    <link rel="stylesheet" href="../Central de Ajuda/Central de Ajuda_css/Rodapé/rodape_base.css">
-    <link rel="stylesheet" href="../Central de Ajuda/Central de Ajuda_css/Rodapé/rodape_boniteza.css">
-    <link rel="stylesheet" href="../Central de Ajuda/Central de Ajuda_css/central_de_ajuda_css.css">
-    <script src="../Central de Ajuda/Central de ajuda_js/central_de_ajuda_js.js"></script>
+    <link rel="stylesheet" href="../../Css/Central de Ajuda/header_css.css.css">
+    <link rel="stylesheet" href="../../Css/Central de Ajuda/Rodapé/rodape_base.css">
+    <link rel="stylesheet" href="../../Css/Central de Ajuda/Rodapé/rodape_boniteza.css">
+    <link rel="stylesheet" href="../../Css/Central de Ajuda/central_de_ajuda_css.css">
+    
     <title>Central de Ajuda</title>
 </head>
 <body>
+
     
+
     <header>
 
         <div class="logo">Data Nexus</div>
@@ -63,10 +65,10 @@
 
                 <h2 class="title">Fale Conosco</h2>
 
-                <form action="" method="get">
+                <form name="myform" action="" method="get">
 
                     <input type="text" id="nome" name="name" placeholder="Seu nome" required>
-                    <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                    <input type="email" id="email"  name="email" oninput="minuscula()" placeholder="Seu E-mail" required>
                     <input type="tel" id="phone" name="telefone" placeholder="Seu Telefone"  required style="margin-right: 16px ;">
 
                     <input type="text" list="opcao" placeholder="Assuntos" multiple/>
@@ -84,16 +86,20 @@
                     <textarea name="message" placeholder="Digite sua mensagem"></textarea>
 
                     <button type="submit" id="envio"> Envie sua Mensagem</button>
+                    
 
                 </form>
             </div>
         </div>
 
+        
+
     </main>
 
     <footer>
 
-     
+        <input type="button" id="botao_de_voltar", class="botoes_de_ir_e_voltar" value="Voltar" onclick="voltar()">
+        <input type="button" id="botao_de_avancar", class="botoes_de_ir_e_voltar" value="Avançar" onclick="avancar()">
     
           <nav>
     
@@ -150,9 +156,27 @@
     
          </div>
 
+         <p id="janela" class="js_rodape"></p>
+         <p id="tela" class="js_rodape"></p>
+         <p id="espaco_disponivel" class="js_rodape"></p>
+         <p id="more_with_js"></p>
+
+         <script>
+ 
+             document.getElementById("janela").innerHTML="A largura da janela do seu navegador é: " + window.innerWidth + "px<br>" + "A altura da janela do seu navegador é: " + window.innerHeight + "px";
+
+             document.getElementById("tela").innerHTML="A altura da tela do seu dispositivo é: " + screen.width + "px<br>" +"A largura da janela do seu dispositivo é: " + screen.height + "px";
+
+             document.getElementById("espaco_disponivel").innerHTML="O espaço disponível é: " + screen.availWidth + "px largura e " + screen.availHeight+  "px altura";
+
+             document
+
+         </script>
 
 
     </footer>
+
+    <script src="../../JavaScript/Central de Ajuda/central_de_ajuda_js.js"></script>
 
 </body>
 </html>
