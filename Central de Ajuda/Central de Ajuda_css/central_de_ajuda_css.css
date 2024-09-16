@@ -90,6 +90,26 @@ body, textarea {
     padding: 16px;
 }
 
+
+
+.botoes_de_ir_e_voltar {
+
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 60px;
+    margin-top: 10px;
+    width: 100px;
+    height: 48px;
+    border-radius: 50px;
+    background-color: #1F0740;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
 .form_box button {
 
     display: block;
