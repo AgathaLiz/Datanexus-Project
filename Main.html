@@ -2,15 +2,57 @@
 <html>
     <head>
        <link rel="stylesheet" href="main.css">
-       <link rel="stylesheet" href="cabeçalho.css">
-       <link rel="stylesheet" href="../Central de Ajuda/Central de Ajuda_css/Rodapé/rodape_base.css">
-       <link rel="stylesheet" href="../Central de Ajuda/Central de Ajuda_css/Rodapé/rodape_boniteza.css">
+       <link rel="stylesheet" href="C:\Users\alber\OneDrive\Documentos\teste-projeto\Datanexus Project\parte_da_yasmin\cabeçalho.css">
+       <link rel="stylesheet" href="../html/Css/rodape_base.css">
+       <link rel="stylesheet" href="../html/Css/rodape_boniteza.css">
        <meta http-equiv="X-UA-Compatible" content="ie=edge">
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       <script>
+        function setCookie(cname,cvalue,exdays) {
+          const d = new Date();
+          d.setTime(d.getTime() + (exdays*24*60*60*1000));
+          let expires = "expires=" + d.toUTCString();
+          document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        
+        function getCookie(cname) {
+          let name = cname + "=";
+          let decodedCookie = decodeURIComponent(document.cookie);
+          let ca = decodedCookie.split(';');
+          for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        
+        function checkCookie() {
+          let user = getCookie("username");
+          if (user != "") {
+            alert("Welcome again " + user);
+          } else {
+             user = prompt("Please enter your name:","");
+             if (user != "" && user != null) {
+               setCookie("username", user, 30);
+             }
+          }
+        }
+        </script>
+       
     </head>
-    <body>
+    <body onload="setUsername()">
         <header>
+
+         
+
+        <!--Meu-->
 
           <div id="container-fixo">
                 
@@ -23,7 +65,7 @@
                <p class="texto"> Nexus fidelidade</p>
              </div>   
              <div id="ajuda-container">
-             <a href="../Central de Ajuda/central_de_ajuda.html"><img src="icones/Ajuda.png" alt="ajuda" id="ajuda" ></a> 
+             <img src="icones/Ajuda.png" alt="ajuda" id="ajuda">
              <p>Ajuda</p>
          </div> 
          <div class="dropdown">
@@ -32,7 +74,7 @@
              <ul id="tata"> 
           <li> <div class="menu-item"><i class="icon-pedidos"></i> Meus pedidos</div> </li>
           <li> <div class="menu-item"><i class="icon-pontos"></i> Comprar pontos Nexusfidelidade</div> </li>
-          <li> <div class="menu-item"><a href="../Central de Ajuda/central_de_ajuda.html"><i class="icon-ajuda"></i> Central de ajuda</div> </li>
+          <li> <div class="menu-item"><i class="icon-ajuda"></i> Central de ajuda</div> </li>
           <li> <div class="menu-item"><i class="icon-quem-somos"></i> Quem somos</div> </li>
           <li> <div class="menu-item"><i class="icon-milhas"></i> Negociar milhas</div> </li>
           <li> <div class="menu-item"><i class="icon-conexao"></i> ConexãoNexus</div> </li>
@@ -55,7 +97,7 @@
                 <li id=""> <a href="#"><img src="Icones/hotel.png">Hotéis </a></li>
                 <li class="icones"> <a href="#"><img src="icones/avião.png">Voos</a></li>
                 <li class="icones"> <a href="#"><img src="Icones/ônibus.png">Ônibus</a></li>
-                <li class="icones"> <a href="../seguro/seguro.html"><img src="Icones/seguro.png" alt="Seguro Viagem">Seguro Viagem</a></li>
+                <li class="icones"> <a href="#"><img src="Icones/seguro.png" alt="Seguro Viagem">Seguro Viagem</a></li>
                 <li class="icones"> <a href="#"><img src="Icones/oferta.png">Top Oferta</a></li>
             </ul>       
         </nav>
@@ -79,8 +121,7 @@
           <label>De onde está saindo?</label>
           <input type="text" name="origem" id="origem">
       </div>
-      
-      <div class="campo">
+            <div class="campo">
           <label>Onde está indo?</label>
           <input type="text" name="destino" id="destino">
       </div>
@@ -102,15 +143,17 @@
          <div class="passageiros-container">
          
           <input type="text" name="passageiros" id="passageiros" readonly>
-          <button type="button"  id="decrementar" class="hidden">-</button>
+          <button type="button" id="decrementar" class="hidden">-</button>
           <button type="button" id="incrementar" class="hidden">+</button>
         </div>
       </div>
+      <button type="submit" class="botão">Buscar Voos</button>
   </fieldset>
-  <button type="submit" class="botão">Buscar Voos</button>
+  
  </form>
   </div>
-</section>  
+</section> 
+<!--Script para remover o campo de volta--> 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const idaEVoltaBtn = document.getElementById('ida-e-volta');
@@ -138,8 +181,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
   });
  
+
+
+
 </script>
 
+
+<!--Script para adicionar o contador e para o esconder-->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
   let contador = 0;
@@ -168,13 +216,13 @@ document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault();
     contador++;
     inputElement.value = contador;
-    if (contador>10){
-    alert("Não é possível comprar mais de 10 passagens de uma vez");
-  }
-  if (contador>9){
-    alert("Não é possível comprar mais de 10 passagens de uma vez");
-    document.getElementById('incrementar').disabled=true;
-  }
+
+    if(contador.lenght>10){
+      alert("Não é possível comprar mais de 10 passagens");
+      
+    }
+
+   
   });
 
   // Decrementar contador
@@ -185,12 +233,13 @@ document.addEventListener('DOMContentLoaded', function() {
       inputElement.value = contador;
     }
 
-   
+    if(contador.lenght>10){
+      document.getElementById('incrementarBtn').disable=true;
+    }
+
+
+   });
 });
-
-  });
-
- 
 
 </script>
 
@@ -283,8 +332,8 @@ document.addEventListener('DOMContentLoaded', function() {
                   </div>
                  </div>
                </div>
-              <nav class="agatha">
-                <p>Ver todos os destinos</p>
+              <nav>
+                <p class="center">Ver todos os destinos</p>
               </nav>
                     
                     <div class="conteiner">
