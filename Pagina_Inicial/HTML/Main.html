@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../Css/main.css">
+       <link rel="stylesheet" href="../Css/cabeçalhoteste.css">
+       <link rel="stylesheet" href="../Rodapé/rodape_base.css">
+       <link rel="stylesheet" href="../Rodapé/rodape_boniteza.css">
+       <script src="../JavaScript/main.js"></script>
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     
+    </head>
+    <body>
+
+      <div class="cookies-msg" id="cookies-msg">
+        <div class="cookies-txt">
+          <p>
+            Este site usa cookies e tecnologias afins, que são pequenos arquivos ou pedaços de textos baixaedos
+          </p>
+          <div class="cookies-btn">
+            <button onclick="aceito()">Aceito</button>
+          </div>
+        </div>
+      </div>
+        <header>
+
+          <div id="container-fixo">
+                
+            <div id="left">
+             
+              <img src="../icones/logo.jpeg" id="logo"> 
+              <p class="nexus">Nexus</p>
+             </div>
+             <div id="right">
+              <a href="../../login/login.html"><p class="texto"> Nexus fidelidade</p></a>
+             </div>   
+             <div id="ajuda-container">
+             <a href="../../Central de Ajuda/central_de_ajuda.html"><img src="../icones/Ajuda.png" alt="ajuda" id="ajuda" ></a> 
+             <p>Ajuda</p>
+         </div> 
+         <div class="dropdown">
+           <button class="dropdown-button"><img src="../Icones/menu.png" class="menu-item"></button>
+           <div class="dropdown-content">
+             <ul id="tata"> 
+          <li> <div class="menu-item"><a href="../../login/login.html"></a><i class="icon-pedidos"></i> Meus pedidos</div> </li>
+          <li> <div class="menu-item"><i class="icon-pontos"></i> Comprar pontos Nexusfidelidade</div> </li>
+          <li> <div class="menu-item"><a href="../../Central de Ajuda/central_de_ajuda.html"><i class="icon-ajuda"></i> Central de ajuda</div> </li>
+          <li> <div class="menu-item"><i class="icon-quem-somos"></i> Quem somos</div> </li>
+          <li> <div class="menu-item"><i class="icon-milhas"></i> Negociar milhas</div> </li>
+          <li> <div class="menu-item"><i class="icon-conexao"></i> ConexãoNexus</div> </li>
+          <li> <div class="menu-item"><i class="icon-termos"></i> Termos e condições</div> </li>
+          <li> <div class="menu-item"><i class="icon-cancelamento"></i> Políticas de cancelamento</div> </li>
+             </ul>
+             </div>
+       </div>
+       <script>
+           document.querySelector('.dropdown-button').addEventListener('click', function() {
+ this.parentNode.classList.toggle('show');
+});
+       </script>
+</div>
+<!--Fim da parte fixa de rolagem-->
+        </header>
+        <main>
+          <nav class="menu"><!--Linha roxa-->
+            <ul>
+                <li id=""> <a href="#"><img src="../icones/hotel.png">Hotéis </a></li>
+                <li class="icones"> <a href="#"><img src="../icones/avião.png">Voos</a></li>
+                <li class="icones"> <a href="#"><img src="../icones/ônibus.png">Ônibus</a></li>
+                <li class="icones"> <a href="../../seguro/HTML/seguro.html"><img src="../icones/seguro.png" alt="Seguro Viagem">Seguro Viagem</a></li>
+                <li class="icones"> <a href="#"><img src="../icones/oferta.png">Top Oferta</a></li>
+            </ul>       
+        </nav>
+       <!--Linha verde-->  
+      <section id="parte-azul">
+       <div id="parte-branca">
+       
+        <div id="passagem">
+          <h1>PASSAGENS AÉREAS</h1>
+         
+          <div class="toggle-button">
+            <button class="toggle-option active" id="ida-e-volta">Ida e Volta</button>
+            <button class="toggle-option" id="somente-ida">Somente Ida</button>
+        </div>
+        </div>
+  
+
+<form>
+  <fieldset class="form-container">
+      <div class="campo">
+          <label>De onde está saindo?</label>
+          <input type="text" name="origem" id="origem">
+      </div>
+      
+      <div class="campo">
+          <label>Onde está indo?</label>
+          <input type="text" name="destino" id="destino">
+      </div>
+
+      <div class="campo">
+          <label for="ida">Quando irá sair?</label>
+          <input type="date" name="ida" id="ida">
+      </div>
+
+      <div class="campo">
+        <div class="campo return-date">
+          <label for="return-date">Quando irá voltar?</label>
+          <input type="date" name="sobrenome" id="return-date-field">
+        </div>
+      </div>
+
+      <div class="campo">
+          <label>Quantos passageiros?</label>
+         <div class="passageiros-container">
+         
+          <input type="text" name="passageiros" id="passageiros" readonly>
+          <button type="button"  id="decrementar" class="hidden">-</button>
+          <button type="button" id="incrementar" class="hidden">+</button>
+        </div>
+      </div>
+  </fieldset>
+  <button type="submit" class="botão">Buscar Voos</button>
+ </form>
+  </div>
+</section>  
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const idaEVoltaBtn = document.getElementById('ida-e-volta');
+  const somenteIdaBtn = document.getElementById('somente-ida');
+  const returnDateField = document.querySelector('.return-date');
+
+  function toggleTripOption(event) {
+      // Remove active class from both buttons
+      idaEVoltaBtn.classList.remove('active');
+      somenteIdaBtn.classList.remove('active');
+      
+      // Add active class to the clicked button
+      event.target.classList.add('active');
+
+      // Show or hide the return date field based on the selection
+      if (event.target.id === 'somente-ida') {
+          returnDateField.style.display = 'none'; // Hide return date field
+      } else {
+          returnDateField.style.display = 'block'; // Show return date field
+      }
+    }
+
+    idaEVoltaBtn.addEventListener('click', toggleTripOption);
+   somenteIdaBtn.addEventListener('click', toggleTripOption);
+    
+  });
+ 
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  let contador = 0;
+  const inputElement = document.getElementById('passageiros');
+  const incrementarBtn = document.getElementById('incrementar');
+  const decrementarBtn = document.getElementById('decrementar');
+
+  // Mostrar botões ao focar no campo de passageiros
+  inputElement.addEventListener('focus', () => {
+    incrementarBtn.classList.remove('hidden');
+    decrementarBtn.classList.remove('hidden');
+  });
+
+  // Ocultar botões quando clicar fora do campo e dos botões
+  inputElement.addEventListener('blur', () => {
+    setTimeout(() => {
+      if (!document.activeElement.closest('.passageiros-container')) {
+        incrementarBtn.classList.add('hidden');
+        decrementarBtn.classList.add('hidden');
+      }
+    }, 100);  // Pequeno atraso para permitir clique nos botões
+  });
+
+  // Incrementar contador
+  incrementarBtn.addEventListener('mousedown', (event) => {
+    event.preventDefault();
+    contador++;
+    inputElement.value = contador;
+   
+  if (contador>9){
+    alert("Não é possível comprar mais de 10 passagens de uma vez");
+    document.getElementById('incrementar').disabled=true;
+  }
+  });
+
+  // Decrementar contador
+  decrementarBtn.addEventListener('mousedown', (event) => {
+    event.preventDefault();
+    if (contador > 0) {
+      contador--;
+      inputElement.value = contador;
+    }
+
+   
+});
+
+  });
+
+ 
+
+</script>
+
+
+         <div>
+             <div>
+               <h1 id="titulo">VOOS COM ATÉ 50% DE DESCONTO</h1>
+                <p id="sub">
+                   Saída: São Paulo </p>
+             </div>
+                <div class="toggle-button">
+                    <button class="toggle-option active" id="nacional">Nacional</button>
+                    <button class="toggle-option" id="internacional">Internacional</button>
+                </div>
+         </div>  
+         
+           <div class="container">
+             <div class="card">
+              <img src="../img/img 1.jpeg" alt="Recife" class="image">
+               <div class="text">
+                <h2>Alice</h2>
+                <p class="price">R$ 381</p>
+                <button>VER MAIS</button> 
+               </div>
+              </div>
+         
+                <div class="card">
+                 <img src="../img/img 2.jpeg" alt="Recife" class="image">
+                  <div class="text">
+                   <h2>Arial</h2>
+                   <p class="price">R$ 381</p>
+                   <button>VER MAIS</button> 
+                  </div>
+                 </div>
+             
+               <div class="card">
+                 <img src="../img/img 3.jpeg" alt="Recife" class="image">
+                  <div class="text">
+                   <h2>Ophelia</h2>
+                   <p class="price">R$ 381</p>
+                   <button>VER MAIS</button> 
+                  </div>
+                 </div>
+             
+                <div class="card">
+                 <img src="../img/img 4.jpeg" alt="Recife" class="image">
+                  <div class="text">
+                   <h2>Aurelio</h2>
+                   <p class="price">R$ 381</p>
+                   <button>VER MAIS</button> 
+                  </div>
+                 </div>
+               </div>
+   
+               <div class="container">
+                <div class="card">
+                 <img src="../img/img 5.jpeg" alt="Recife" class="image">
+                  <div class="text">
+                   <h2>Opposite</h2>
+                   <p class="price"><span style="font-weight: lighter;">Apartir de:</span>
+                    R$ 381</p>
+                   <button>VER MAIS</button> 
+                  </div>
+                 </div>
+            
+                <div class="card">
+                 <img src="../img/img 6.jpeg" alt="Recife" class="image">
+                  <div class="text">
+                   <h2>Im so</h2>
+                   <p class="price">R$ 381</p>
+                   <button>VER MAIS</button> 
+                  </div>
+                 </div>
+        
+                <div class="card">
+                 <img src="../img/img 7.jpeg" alt="Recife" class="image">
+                  <div class="text">
+                   <h2>Franjin</h2>
+                   <p class="price">R$ 381</p>
+                   <button>VER MAIS</button> 
+                  </div>
+                 </div>
+          
+                <div class="card">
+                 <img src="../img/img 8.jpeg" alt="Recife" class="image">
+                  <div class="text">
+                   <h2>Papoula</h2>
+                   <p class="price">R$ 381</p>
+                   <button>VER MAIS</button> 
+                  </div>
+                 </div>
+               </div>
+              <nav class="agatha">
+                <p>Ver todos os destinos</p>
+              </nav>
+                    
+                    <div class="conteiner">
+                        <div class="item">
+                            <figure>
+                             <img src="../img/miniatura/mini 1.jpeg" alt="Quem Somos" class="image">
+                            </figure>
+                            <div class="texto">
+                              <h2>QUEM SOMOS</h2>
+                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Optio ratione dignissimos repudiandae nulla, minus fugit vel. 
+                                Amet assumenda reprehenderit iusto totam ab quas laboriosam,
+                                quis aliquam consectetur, illum porro et amo muiyo aaaaaaaaaaaaaa.</p>
+                               <a href="#">SAIBA MAIS</a>
+                            </div>
+                            </div>
+                      
+                    <div class="item">
+                         <figure>
+                           <img src="../img/miniatura/mini 2.jpeg" alt="Quem Somos" class="image">
+                         </figure>
+                          <div class="texto">
+                            <h2>NÃO PRECISA TER MILHAS</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                               Soluta distinctio minima fuga voluptatibus facere similique,
+                               repellat beatae harum necessitatibus dolore sapiente quia culpa,
+                               ad iure consequatur perspiciatis qui obcaecati inventore.</p>
+                            <a href="#">SAIBA MAIS</a>
+                    </div>
+                    </div>
+                         
+                    <div class="item">
+                        <figure>
+                         <img src="../img/miniatura/mini 3.jpeg" alt="Quem Somos" class="image">
+                        </figure>
+                          <div class="texto">
+                            <h2>NOSSO BLOG</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                               Quia sapiente animi porro quam fuga doloribus.
+                               Atque, harum cupiditate adipisci nobis quo,
+                               eos quisquam tempore quis vel veritatis totam quia numquam.</p>
+                            <a href="#">SAIBA MAIS</a>
+                            </div> 
+                            </div>
+                        </div>
+                 <article id="ce">
+                    <h2>CENTRAL DE AJUDA</h2>
+                    <p>Escolha como você quer ser atendido</p>
+                    <a href="#">ACESSE AGORA</a>
+                    <figcaption><img src="../img/miniatura/atendimento.webp"></figcaption>
+                 </article>
+
+                
+                  
+                  <p class="parag_rodape"> O melhor site para a compra de passagens!</p>
+      
+           
+                    
+        </main>
+       
+       
+        <footer>
+
+          <div class="parte_de_informacoes">
+
+       
+
+            <img src="" alt="Informações da empresa DataNexus" class="img.rodape">
+    
+            <p class="informacoes_dtn">
+    
+              DataNexus Technology Ltda.
+                <br>
+              CNPJ: 00.000.000/0001-00
+                <br>
+              Rua Carlinhos de Almeidas, 0001 - Boa vista
+                <br>
+               Cep 30.140-000, São Paulo/SP
+            </p>  
+          </div>
+          <nav class="tutu">
+            <ul id="lista_maislinks">
+              <li class="links"><a href="#">Quem somos</a></li>
+              <li class="links"><a href="#">Política e Privacidade</a></li>
+              <li class="links"><a href="#">Termos e Condições</a></li>
+              <li class="links"><a href="#">Regras de remarcação, cancelamento e reembolso</a></li>
+              <li class="links"><a href="#">Trabalhe Conosco</a></li>
+            </ul>
+          </nav>
+          <div class="parte_do_pagamento">
+            <h2 id="formasdepagamento">Formas de Pagamento</h2>
+              <ul class="lista_geral", class="links_outros">
+              <li class="links_outros",id="bb"></li>
+              <li id="bradesco">MasterCard</li>
+              <li id="caixa">MasterCard</li>
+              <li id="elo">MasterCard</li>
+              <li id="itau">MasterCard</li>
+              <li id="mastercard">MasterCard</li>
+              <li id="pix">MasterCard</li>
+              <li id="santader">MasterCard</li>
+              <li id="visa">MasterCard</li>
+            <p class="parag_rodape"> Pague no cartão de crédito até 12X com juros, boleto à vista ou parcelado, ou com pix!</p>
+              </ul>
+          </div>
+          <div class="parte_do_siga">
+          <p class="parag_rodape"> A DataNexus oferece as melhores passagens e viagens para onde você quiser ir com o preço acessível. Viaje conosco!</p>
+          <h3 id="sigatitulo">Siga-nos</h3>
+          <ul class="lista_geral", class="links_outros">
+            <li class="links_outros"><a id="instagram" href="https://www.instagram.com/datanexustech/?igsh=MWI2OTBrNDBmeWJ2bg%3D%3D">instagram</a></li>
+            <li class="links_outros"><a id="facebook" href="Imagens/logo-facebook.webp">facebook</a></li>
+            <li class="links_outros"><a id="twitter" href="Imagens/logo-twitter.webp">twitter</a></li>
+            <li class="links_outros"><a id="tiktok" href="Imagens/logo-tiktok.webp">tiktok</a> </li>
+            <li class="links_outros"><a id="youtube" href="Imagens/logo-youtube.webp">youtube</a></li>      
+          </ul>
+         </div>
+        </footer>
+    </body>
+</html>
