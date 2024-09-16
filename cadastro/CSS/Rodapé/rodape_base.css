@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+ul.lista_geral > li {
+
+    padding-top: 0px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 5px;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    height: 100px;
+}
+
+ul.links_outros > li {
+
+    text-indent: -9999;
+    width: 90px;
+    display: inline;
+}
+
+.lista_maislinks > ul {
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto; 
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+    
+}
+
+.parte_do_pagamento > ul {
+
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto; 
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+}
+
+.parte_do_siga > ul {
+
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto; 
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+}
+
+
+footer > nav{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 30px;
+ 
+}
+
+footer > nav > ul{
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto; 
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+ 
+}
+
+.lista_maislinks {
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto; 
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+    
+
+}
+
+.links {
+
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 45px;
+    padding-bottom: 5px;
+    display: inline;
+}
+
+.parte_do_pagamento {
+    padding-top: 50px;
+}
+
+
+
+.parag_rodape {
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+/**Imagem e Informações dela**/
+
+.parte_de_informacoes{
+
+   
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.informacoes_dtn {
+
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+footer > img {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+    border-radius: 90px;
+}
+
+
+
