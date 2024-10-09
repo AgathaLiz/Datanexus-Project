@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../CSS/cabeçalhoteste.css">
+       <link rel="stylesheet" href="../CSS/main.css">
+       <link rel="stylesheet" href="../CSS/Rodapé/rodape_base.css">
+       <link rel="stylesheet" href="../CSS/Rodapé/rodape_boniteza.css">
+       <script src="../JAVASCRIPT/main.js"></script>
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     
+    </head>
+    <body>
+
+
+        <header>
+
+          <div id="container-fixo">
+                
+            <div id="left">
+             
+              <img src="../CSS/Imagens/icones/logo.jpeg" id="logo"> 
+              <p class="nexus">Nexus</p>
+             </div>
+             <div id="right">
+              <a href="login.html"><p class="texto"> Nexus fidelidade</p></a>
+             </div>   
+             <div id="ajuda-container">
+             <a href="central_de_ajuda.html"><img src="../CSS/Imagens/icones/ajuda.jpeg" alt="ajuda" id="ajuda" ></a> 
+             <p>Ajuda</p>
+         </div> 
+         <div class="dropdown">
+           <button class="dropdown-button"><img src="../CSS/Imagens/icones/menu.jpeg" class="menu-item"></button>
+           <div class="dropdown-content">
+             <ul id="tata"> 
+          <li> <div class="menu-item"><a href="login.html"></a><i class="icon-pedidos"></i> Meus pedidos</div> </li>
+          <li> <div class="menu-item"><i class="icon-pontos"></i> Comprar pontos Nexusfidelidade</div> </li>
+          <li> <div class="menu-item"><a href="central_de_ajuda.html"><i class="icon-ajuda"></i> Central de ajuda</div> </li>
+          <li> <div class="menu-item"><i class="icon-quem-somos"></i> Quem somos</div> </li>
+          <li> <div class="menu-item"><i class="icon-milhas"></i> Negociar milhas</div> </li>
+          <li> <div class="menu-item"><i class="icon-conexao"></i> ConexãoNexus</div> </li>
+          <li> <div class="menu-item"><i class="icon-termos"></i> Termos e condições</div> </li>
+          <li> <div class="menu-item"><i class="icon-cancelamento"></i> Políticas de cancelamento</div> </li>
+             </ul>
+             </div>
+       </div>
+       <script>
+           document.querySelector('.dropdown-button').addEventListener('click', function() {
+ this.parentNode.classList.toggle('show');
+});
+       </script>
+</div>
+<!--Fim da parte fixa de rolagem-->
+        </header>
+        <main>
+          <nav class="menu"><!--Linha roxa-->
+            <ul>
+                <li id=""> <a href="#"><img src="../CSS/Imagens/icones/hotel.jpeg">Hotéis </a></li>
+                <li class="icones"> <a href="#"><img src="../CSS/Imagens/icones/aviao.jpeg">Voos</a></li>
+                <li class="icones"> <a href="#"><img src="../CSS/Imagens/icones/onibus.jpeg">Ônibus</a></li>
+                <li class="icones"> <a href="seguro.html"><img src="../CSS/Imagens/icones/seguro.jpeg" alt="Seguro Viagem">Seguro Viagem</a></li>
+                <li class="icones"> <a href="#"><img src="../CSS/Imagens/icones/oferta.jpeg">Top Oferta</a></li>
+            </ul>       
+        </nav>
+       <!--Linha verde-->  
+      <section id="parte-azul">
+       <div id="parte-branca">
+       
+        <div id="passagem">
+          <h1>PASSAGENS AÉREAS</h1>
+         
+          <div class="toggle-button">
+            <button class="toggle-option active" id="ida-e-volta">Ida e Volta</button>
+            <button class="toggle-option" id="somente-ida">Somente Ida</button>
+        </div>
+        </div>
+  
+
+<form>
+  <fieldset class="form-container">
+      <div class="campo">
+          <label>De onde está saindo?</label>
+          <input type="text" name="origem" id="origem">
+      </div>
+      
+      <div class="campo">
+          <label>Onde está indo?</label>
+          <input type="text" name="destino" id="destino">
+      </div>
+
+      <div class="campo">
+          <label for="ida">Quando irá sair?</label>
+          <input type="date" name="ida" id="ida">
+      </div>
+
+      <div class="campo">
+        <div class="campo return-date">
+          <label for="return-date">Quando irá voltar?</label>
+          <input type="date" name="sobrenome" id="return-date-field">
+        </div>
+      </div>
+
+      <div class="campo">
+          <label>Quantos passageiros?</label>
+         <div class="passageiros-container">
+         
+          <input type="text" name="passageiros" id="passageiros" readonly>
+          <button type="button"  id="decrementar" class="hidden">-</button>
+          <button type="button" id="incrementar" class="hidden">+</button>
+        </div>
+      </div>
+  </fieldset>
+  <button type="submit" class="botão">Buscar Voos</button>
+ </form>
+  </div>
+</section>  
+
+
+                    
+        </main>
+       
+       
+        <footer>
+
+          <div class="parte_de_informacoes">
+
+       
+
+            <img src="Imagens/Datanexus.jpeg" alt="Informações da empresa DataNexus" id="img.rodape">
+    
+            <p class="informacoes_dtn">
+    
+              DataNexus Technology Ltda.
+                <br>
+              CNPJ: 00.000.000/0001-00
+                <br>
+              Rua Carlinhos de Almeidas, 0001 - Boa vista
+                <br>
+               Cep 30.140-000, São Paulo/SP
+            </p>  
+          </div>
+          <nav class="tutu">
+            <ul id="lista_maislinks">
+              <li class="links"><a href="#">Quem somos</a></li>
+              <li class="links"><a href="#">Política e Privacidade</a></li>
+              <li class="links"><a href="#">Termos e Condições</a></li>
+              <li class="links"><a href="#">Regras de remarcação, cancelamento e reembolso</a></li>
+              <li class="links"><a href="#">Trabalhe Conosco</a></li>
+            </ul>
+          </nav>
+          <div class="parte_do_pagamento">
+            <h2 id="formasdepagamento">Formas de Pagamento</h2>
+              <ul class="lista_geral", class="links_outros">
+              <li class="links_outros",id="bb"></li>
+              <li id="bradesco">MasterCard</li>
+              <li id="caixa">MasterCard</li>
+              <li id="elo">MasterCard</li>
+              <li id="itau">MasterCard</li>
+              <li id="mastercard">MasterCard</li>
+              <li id="pix">MasterCard</li>
+              <li id="santader">MasterCard</li>
+              <li id="visa">MasterCard</li>
+            <p class="parag_rodape"> Pague no cartão de crédito até 12X com juros, boleto à vista ou parcelado, ou com pix!</p>
+              </ul>
+          </div>
+          <div class="parte_do_siga">
+          <p class="parag_rodape"> A DataNexus oferece as melhores passagens e viagens para onde você quiser ir com o preço acessível. Viaje conosco!</p>
+          <h3 id="sigatitulo">Siga-nos</h3>
+          <ul class="lista_geral", class="links_outros">
+            <li class="links_outros"><a id="instagram" href="https://www.instagram.com/datanexustech/?igsh=MWI2OTBrNDBmeWJ2bg%3D%3D">instagram</a></li>
+            <li class="links_outros"><a id="facebook" href="Imagens/logo-facebook.webp">facebook</a></li>
+            <li class="links_outros"><a id="twitter" href="Imagens/logo-twitter.webp">twitter</a></li>
+            <li class="links_outros"><a id="tiktok" href="Imagens/logo-tiktok.webp">tiktok</a> </li>
+            <li class="links_outros"><a id="youtube" href="Imagens/logo-youtube.webp">youtube</a></li>      
+          </ul>
+         </div>
+        </footer>
+    </body>
+</html>
