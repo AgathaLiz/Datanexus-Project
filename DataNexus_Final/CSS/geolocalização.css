@@ -1,0 +1,61 @@
+#map {
+    height: 400px; 
+    width: 90%; 
+    left: 40px;
+    border-radius: 4px;
+    box-shadow: 0 0 14px 10px rgba(177, 58, 251, 0.5);
+}
+
+body {
+    background-color: rgba(19, 0, 25, 100%);
+}
+h1 {
+    text-align: center;
+    background-color: rgba(44, 0, 75, 0.57);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h2 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+}
+#location {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+}
+h4 {
+    color: white;
+}
+#ii {
+    font: 200;
+    font-size: medium;
+    padding: 0;
+}
+
+h2::after {
+    content: url(../CSS/img/store\ location.png);
+    font-size: 40px;
+    width: 100%;
+    margin-left: 8px; 
+    color: rgb(255, 255, 255);
+}
+
+p{
+   color: white;
+   font-size: 35px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   line-height: 1.2px;
+}
+
+.i::before {
+    content: url(../CSS/img/gpss.png);
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 8px;
+}
+.i:hover {
+    transition: 2s;
+    color: aquamarine;
+}
