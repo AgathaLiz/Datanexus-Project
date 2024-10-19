@@ -35,3 +35,21 @@ senha.setAttribute('style', 'border-color: red')
 }
   
 })
+
+
+/*Checagem para saber se já existe um Web Worker*/
+let w;
+
+    function startWorker() { 
+      if (typeof (w) == "undefined") { /*Aqui ele verifica se existe algo na variável  w */
+        w = new Worker("script.js"); /*Como a variável  "w" esta indefinida ele a transforma em um Web Worker*/
+      }
+      w.onmessage = function (event) {
+        document.getElementById("result").innerHTML = event.data; /*Aqui é a mensagem enviada no Web Worker, os segundos, e escreve no input result*/
+      }
+    }
+
+    function stopWorker() { 
+      w.terminate();
+      w = undefined; /*Aqui o Web Worker termina com o clique no botão, e transforma a variável em indefenida novamente*/
+    }
