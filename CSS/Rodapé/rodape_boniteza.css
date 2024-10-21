@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+/**cores e fontes**/
+
+:root {
+
+    --cor0:#F2F2F2;
+    --cor1:#B79BF2;
+    --cor3:#1F0740;
+    --cor4:#211626;
+    --cinza: #4b484d;
+
+    --font-padrao: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-destaque: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+
+/**aside**/
+
+#faq1 {
+    border-top: 10px;
+    border-style: solid;
+    border-color: var(--cor1);
+    border-radius: 5px;
+    font-family: var(--font-padrao);
+}
+
+#faq2 {
+    border-top: 10px;
+    border-style: solid;
+    border-color: var(--cor1);
+    border-radius: 5px;
+    font-family: var(--font-padrao);
+}
+
+#faq3 {
+    border-top: 10px;
+    border-style: solid;
+    border-color: var(--cor1);
+    border-radius: 5px;
+    font-family: var(--font-padrao);
+}
+
+aside > p {
+
+    background-color: #b69bf241;
+    border-radius: 10px;
+}
+
+.parag_rodape {
+
+    font-family: var(--font-padrao);
+    color: var(--cinza);
+}
+
+/**fim do aside**/
+
+/**começo do rodapé**/
+
+
+footer {
+    border-top: var(--cinza);
+    
+}
+
+.informacoes_dtn {
+
+    color: #1F0740;
+}
+
+.links > a{
+    text-decoration: none;
+    color:var(--cor3);
+    transition-duration: 0.5s;
+    font-family: var(--font-destaque);
+    width: 60px;
+    
+}
+
+footer > a:hover {
+    background-color: #b69bf22d;
+}
+
+.parte_do_pagamento {
+
+    background-color: #b69bf241;
+    border-radius: 10px;
+}
+
+#formasdepagamento{
+
+    font-family:var(--font-destaque) ;
+    color: var(--cinza);
+}
+
+/**formas de pagamento**/
+
+#bb {
+
+    background: url(../../HTML/Imagens/bb.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#bradesco {
+
+    background: url(../../HTML/Imagens/bradescoteste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#caixa {
+
+    background: url(../../HTML/Imagens/caixa.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#elo {
+
+    background: url(../../HTML/Imagens/elo.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#itau {
+
+    background: url(../../HTML/Imagens/itau.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#mastercard {
+
+    background: url(../../HTML/Imagens/mastercardteste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#pix {
+
+    background: url(../..//IHTMLmagens/pix.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#santader {
+
+    background: url(../../HTML/Imagens/santander.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#visa {
+
+    background: url(../../HTML/Imagens/visa.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#sigatitulo {
+
+    font-family:var(--font-destaque) ;
+    color: var(--cinza);
+
+}
+
+#instagram {
+
+    background: url(../../HTML/Imagens/logo-insta.webp) no-repeat;
+    width: 100px;
+    height: 50px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#facebook {
+
+    background: url(../../HTML/Imagens/logo-facebook.webp) no-repeat;
+    width: 100px;
+    height: 50px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#twitter {
+
+    background: url(../../HTML/Imagens/logo-twitter.webp) no-repeat;
+    width: 100px;
+    height: 50px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#tiktok {
+
+    background: url(../../HTML/Imagens/logo-tiktok.webp) no-repeat;
+    width: 100px;
+    height: 50px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#youtube {
+
+    background: url(../../HTML/Imagens/logo-youtube.webp) no-repeat;
+    width: 100px;
+    height: 50px;
+    color: transparent;
+    text-shadow: none;
+}
+
+.links_outros > a {
+    display: inline-block;
+}
