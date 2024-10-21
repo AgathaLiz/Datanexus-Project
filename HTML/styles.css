@@ -1,0 +1,44 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffe4e1;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5em;
+    color: #555;
+}
+
+.heart {
+    font-size: 5em;
+    color: red;
+    margin: 20px 0;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}

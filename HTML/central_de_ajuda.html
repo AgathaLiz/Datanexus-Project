@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ 
+   
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/central_de_ajuda_css.css">
+    <link rel="stylesheet" href="../CSS/Rodapé/rodape_base.css">
+    <link rel="stylesheet" href="../CSS/Rodapé/rodape_boniteza.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+   
+    
+    <title>Central de Ajuda</title>
+
+</head>
+
+
+
+<body> 
+
+   
+    
+
+    <header class="header" id="header">
+      <nav class="nav container">
+         <a href="Main.html" class="nav__logo">DataNexus</a>
+  
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li class="nav__item">
+                  <a href="Main.html" class="nav__link">
+                     <i class="ri-arrow-right-up-line"></i>
+                     <span>Home</span>
+                  </a>
+               </li>
+  
+               <li class="nav__item">
+                  <a href="login.html" class="nav__link">
+                     <i class="ri-arrow-right-up-line"></i>
+                     <span>Nexus Fidelidade</span>
+                  </a>
+               </li>
+  
+               <li class="nav__item">
+                  <a href="seguro.html" class="nav__link">
+                     <i class="ri-arrow-right-up-line"></i>
+                     <span>Seguro Viagem</span>
+                  </a>
+               </li>
+  
+               <li class="nav__item">
+                  <a href="#" class="nav__link">
+                     <i class="ri-arrow-right-up-line"></i>
+                     <span>Quem somos</span>
+                  </a>
+               </li>
+  
+               <li class="nav__item">
+                  <a href="central_de_ajuda.html" class="nav__link">
+                     <i class="ri-arrow-right-up-line"></i>
+                     <span>Fale Conosco</span>
+                  </a>
+               </li>
+            </ul>
+              <!-- Close button -->
+              <div class="nav__close" id="nav-close">
+                 <i class="ri-close-large-line"></i>
+              </div>
+
+              
+           </div>
+
+           <!-- Toggle button -->
+           <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line"></i>
+           </div>
+        </nav>
+     </header>
+
+    <main>
+
+        <div class="container">
+
+            <div class="form_box">
+
+                <h2 class="title">Fale Conosco</h2>
+
+                <div id="welcome">
+
+                    <h2 id="agradecimento_mensagem">Agradecemos por escolher a DataNexus <span id="username"></span></h2>
+                  </br>
+                    <button id="logout">Enviar outra dúvida</button>
+                  </div>
+
+                <form id="name-form" name="myform" action="" method="get">
+
+                    <input type="text" id="name" max="10" name="name" placeholder="Seu nome" required>
+                    <input type="email" id="email"  max="10" name="email" oninput="minuscula()" placeholder="Seu E-mail" required>
+                    <input type="tel" id="phone"  max="10" name="telefone" placeholder="Seu Telefone"  required style="margin-right: 16px ;">
+
+                    <input type="text" list="opcao" placeholder="Assuntos" multiple/>
+
+                        <datalist id="opcao" >
+
+                            <option value="Passagem" >Passagem</option>
+                            <option value="Hotel">Hotel</option>
+                            <option value="Pagamento">Pagamento</option>
+                            <option value="Outros">Outros</option>
+                        </datalist>
+
+                    
+
+                    <textarea name="message" placeholder="Digite sua mensagem"></textarea>
+
+                    <button  type="submit"  id="logout", id="envio"> Envie sua Mensagem</button>
+                    
+                    
+                       
+                </form>
+            </div>
+        </div>
+
+      
+        
+        
+
+    </main>
+
+    <footer>
+
+        <input type="button" id="botao_de_voltar", class="botoes_de_ir_e_voltar" value="Voltar" onclick="voltar()">
+        <input type="button" id="botao_de_avancar", class="botoes_de_ir_e_voltar" value="Avançar" onclick="avancar()">
+    
+          <nav>
+    
+            <ul id="lista_maislinks">
+    
+              <li class="links"><a href="../Quem Somos/Quem somos.html">Quem somos</a></li>
+              <li class="links"><a href="#">Política e Privacidade</a></li>
+              <li class="links"><a href="#">Termos e Condições</a></li>
+              <li class="links"><a href="#">Regras de remarcação, cancelamento e reembolso</a></li>
+              <li class="links"><a href="#">Trabalhe Conosco</a></li>
+    
+            </ul>
+    
+          </nav>
+    
+          <div class="parte_do_pagamento">
+    
+            <h2 id="formasdepagamento">Formas de Pagamento</h2>
+    
+              <ul class="lista_geral", class="links_outros">
+    
+              <li id="bb">bradesco</li>
+              <li id="bradesco">MasterCard</li>
+              <li id="caixa">MasterCard</li>
+              <li id="elo">MasterCard</li>
+              <li id="itau">MasterCard</li>
+              <li id="mastercard">MasterCard</li>
+              <li id="pix">MasterCard</li>
+              <li id="santader">MasterCard</li>
+              <li id="visa">MasterCard</li>
+    
+            <p class="parag_rodape"> Pague no cartão de crédito até 12X com juros, boleto à vista ou parcelado, ou com pix!</p>
+    
+              </ul>
+    
+          </div>
+    
+          <div class="parte_do_siga">
+    
+          <p class="parag_rodape"> A DataNexus oferece as melhre passagens e viagens para onde você quiser ir com o preço acessível. Viaje conosco!</p>
+    
+          <h3 id="sigatitulo">Siga-nos</h3>
+          
+          <ul class="lista_geral", class="links_outros">
+    
+            <li class="links_outros"><a id="instagram" href="https://www.instagram.com/datanexustech/?igsh=MWI2OTBrNDBmeWJ2bg%3D%3D">instagram</a></li>
+            <li class="links_outros"><a id="facebook" href="Imagens/logo-facebook.webp">facebook</a></li>
+            <li class="links_outros"><a id="twitter" href="Imagens/logo-twitter.webp">twitter</a></li>
+            <li class="links_outros"><a id="tiktok" href="Imagens/logo-tiktok.webp">tiktok</a> </li>
+            <li class="links_outros"><a id="youtube" href="Imagens/logo-youtube.webp">youtube</a></li>
+            
+    
+          </ul>
+    
+         </div>
+
+         <p id="janela", class="parag_rodape"></p>
+         <p id="tela", class="parag_rodape"></p>
+         <p id="espaco_disponivel", class="parag_rodape"></p>
+         <p id="more_with_js", class="parag_rodape"></p>
+         <p id="navegador", class="parag_rodape"></p>
+
+         <!--API de chave O QUE É ISSO?-->
+
+         
+         <button onclick="buscarchave()">Busque o nome da primeira chave local</button>
+            <p id="texto-chave"></p>
+        </footer>
+
+        <script src="../JAVASCRIPT/header.js"></script>
+    <script src="../JAVASCRIPT/central_de_ajuda_js.js"></script>
+
+</body>
+</html>
