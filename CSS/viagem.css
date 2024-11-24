@@ -1,0 +1,319 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .superior {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .superior ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: flex-end; /* Alinha à direita */
+  }
+  
+  .superior ul li a {
+    text-decoration: none;
+    color: rgba(44, 8, 66, 0.8);
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  /* Estilo do menu inferior */
+  .inferior {
+    background-color: #eaeaea;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .inferior ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Espaço entre os itens */
+  }
+  
+  .inferior ul li a {
+    text-decoration: none;
+    color: rgba(44, 8, 66, 0.6);
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+ #e1{
+  color:orange;
+  font-weight: bold;
+ }
+h2 {
+  text-align: center;
+  text-shadow: #06031f;
+  color: #291f70;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+ #e2{
+  color:rgb(150, 3, 3);
+  font-weight: bold;
+ } 
+ #e3{
+  color: rgb(3, 108, 3);
+  font-weight: bold;
+ }
+ #e4{
+  color:rgb(2, 6, 121);
+  font-weight: bold;
+ }
+ #e5{
+  color:rgb(52, 0, 117);
+  font-weight: bold;
+ }
+ [id^="e"] {
+  position: relative; /* Necessário para o pseudo-elemento */
+  font-weight: bold;
+  display: inline-block; /* Para alinhar corretamente a linha com o texto */
+  margin: 10px; /* Espaço entre os elementos */
+  text-decoration: none; /* Remove qualquer sublinhado padrão (se for um link) */
+}
+
+/* Adiciona uma linha invisível inicialmente */
+[id^="e"]::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Espaçamento entre o texto e a linha */
+  left: 50%; /* Linha começa no centro */
+  width: 0; /* Invisível inicialmente */
+  height: 2px; /* Espessura da linha */
+  background-color: currentColor; /* A linha herda a cor do texto */
+  transition: width 0.3s ease, left 0.3s ease; /* Animação suave */
+}
+
+/* Animação no hover */
+[id^="e"]:hover::after {
+  width: 100%; /* Linha expande totalmente */
+  left: 0; /* Linha se alinha à esquerda */
+}
+
+/* Estilos personalizados para cada elemento */
+#e1 {
+  color: orange;
+}
+
+#e2 {
+  color: rgb(150, 3, 3);
+}
+
+#e3 {
+  color: rgb(3, 108, 3);
+}
+
+#e4 {
+  color: rgb(2, 6, 121);
+}
+
+#e5 {
+  color: rgb(52, 0, 117);
+}
+  .icon-before1::before {
+    content: url('../img/viagem/icon/search\ \(1\).png');
+    display: inline-block; /* Exibe o ícone */
+    margin-right: 5px; 
+    vertical-align: top; 
+    
+
+  }
+  .icon-before2::before {
+    content: url('../img/viagem/icon/question.png');
+    display: inline-block; /* Exibe o ícone */
+    margin-right: 5px; 
+    vertical-align: top; 
+
+  }
+  .icon-before3::before {
+    content: url('../img/viagem/icon/menu.png');
+    display: inline-block; /* Exibe o ícone */
+    margin-right: 5px; 
+    vertical-align: top; 
+
+  } .icon-before4::before {
+    content: url('../img/viagem/icon/price-tag.png');
+    display: inline-block; /* Exibe o ícone */
+    margin-right: 5px; 
+    vertical-align: top; 
+    
+
+  } .icon-before5::before {
+    content: url('../img/viagem/icon/gps-navigation.png');
+    display: inline-block; /* Exibe o ícone */
+    margin-right: 5px; 
+    vertical-align: top; 
+    color: #9C1919;
+
+  } .icon-before6::before {
+    content: url('../img/viagem/icon/suitcase.png');
+    display: inline-block; /* Exibe o ícone */
+    margin-right: 5px; 
+    vertical-align: top; 
+
+  } .icon-before7::before {
+    content: url('../img/viagem/icon/newspaper.png');
+    display: inline-block; /* Exibe o ícone */
+    margin-right: 5px; 
+    vertical-align: top; 
+   color: #00294F;
+
+  }
+  .icon-before8::before {
+    content: url('../img/viagem/icon/sound.png');
+    display: inline-block; /* Exibe o ícone */
+    margin-right: 5px; 
+    vertical-align: top; 
+
+  }
+  
+  .blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+  }
+  
+  /* Post principal */
+  .post-main {
+    position: relative;
+    width: 65%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .post-main img:hover {
+    opacity: 0.7; /* Deixa a imagem mais transparente no hover */
+    transition: opacity 0.3s ease; /* Transição suave */
+}
+  
+  .post-main img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .texto-main-post {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.34);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .post-main-texto span {
+    background-color: #291f70;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .post-main-texto h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* Posts laterais */
+  .side-posts {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .side-post {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .side-post img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .post-texto {
+    padding: 10px;
+  }
+  
+  .texto-post span {
+    color: #4c27c6;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .texto-post h3 {
+    font-size: 16px;
+    margin: 5px 0 0 0;
+  }
+  footer {
+    background-color: #140f4d;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  footer .links {
+    margin: 20px 0;
+  }
+
+  footer .links a {
+    color: #4e16f4;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+
+  footer .links a:hover {
+    color: #74ddfd;
+  }
+
+  footer .social-icons {
+    margin: 20px 0;
+  }
+
+  footer .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+
+  footer .social-icons a:hover {
+    color: #ff9500;
+  }
+
+  footer .copyright {
+    font-size: 14px;
+    margin-top: 10px;
+  }
