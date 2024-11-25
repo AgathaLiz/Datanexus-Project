@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/viagem.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <script src="Script/viagem.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Nosso Blog de viagens!</title>
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+ <header>
+   <div>
+     <nav class="superior">
+        <ul>
+            <li href="#" class="icon-before1">Buscar</li>
+            <li href="#" class="icon-before2">Ajuda</li>
+            <li href="#" class="icon-before3">Menu</li>
+        </ul>
+     </nav>
+    </div>
+
+    <div class="container">
+     <nav class="inferior">
+        <ul>
+            <li id="e1" href="#" class="icon-before4">Ofertas e cupons</li>
+            <li id="e2" href="#" class="icon-before5">Destinos</li>
+            <li id="e3" href="#" class="icon-before6">Dicas para viajantes</li>
+            <li id="e4" href="#" class="icon-before7">Noticias</li>
+            <li id="e5" href="#" class="icon-before8">Nexus play</li>
+        </ul>
+     </nav>
+   </div>
+</header>
+<main>
+    <div class="blog-container">
+        <div class="post-main">
+          <img src="img/viagem/ft4.jpg" alt="Imagem Principal">
+          <div class="texto-main-post">
+            <span>Dicas para o viajante</span>
+            <h3>Dicas pra você montar um roteiro de viagem perfeito</h3>
+          </div>
+        </div>
+
+     <div class="side-posts">
+        <div class="side-post">
+            <img src="img/viagem/ft2.jpg" alt="Imagem 1">
+          <div class="texto-post">
+            <span>Lugares para conhecer</span>
+              <h3>Quatro cidades brasileiras em que se fala outro idioma</h3>
+        </div>
+     </div>
+
+    <div class="side-post">
+        <img src="img/viagem/ft3.jpg" alt="Imagem 2">
+         <div class="texto-post">
+            <span>Lugares para conhecer</span>
+            <h3>Aproveite o melhor do turismo rural no Brasil viajando de onibus</h3>
+         </div>
+    </div>
+    <div class="side-post">
+      <img src="img/viagem/ft3.jpg" alt="Imagem 2">
+       <div class="texto-post">
+          <span>Lugares para conhecer</span>
+          <h3>Aproveite o melhor do turismo rural no Brasil viajando de onibus</h3>
+       </div>
+  </div>
+   
+    <div class="side-post">
+        <img src="img/viagem/ft1.jpg" alt="Imagem 3">
+         <div class="texto-post">
+            <span>Lugares para conhecer</span>
+            <h3>Viagens de carro pelo Brasil: As rotas mais incriveis!</h3>
+         </div>
+     </div> 
+   </div>
+    </div>
+    
+   
+ <h2>Confira a seguir os 10 países que mais recebem viajantes Brasileiros!</h2>
+ <div id="myPlot" style="width:100%;max-width:700px"></div>
+ <h2>Confira a seguir as temperatures médias das cidades mais visitadas</h2>
+ <canvas id="myChart" style="width:100%;max-width:800px"></canvas>
+
+ <!--Yasmin Grafico ------------------------------------------------------------------------------------->
+ <script>
+
+const xValues = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov"];
+const destinations = ["Paris", "Rio de Janeiro", "Madrid", "Nova York", "Roma", "Buenos Aires"];
+const temperatures = [
+  [8, 9, 13, 17, 21, 24,26, 26, 22, 17, 11, 8 ], // Paris
+  [30, 31, 30, 28, 26, 25, 25, 26, 26, 27, 28, 29 ], // Rio
+  [10, 12, 16, 18, 23, 28, 32, 32, 26, 19, 13, 10], // Madrid
+  [4, 6, 10, 17, 22, 27, 30, 29, 25, 18, 12,7], // Nova York
+  [13, 14, 17, 19, 24, 29, 32, 32, 27, 23, 17, 13], // Roma
+  [29, 28, 26, 22, 19, 16, 15, 17, 19, 22, 25, 28] // Buenos Aires
+];
+const colors = ["red", "green", "yellow", "darkblue", "brown", "lightblue"]; // Cores para cada destino
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: destinations.map((dest, index) => ({
+      label: dest,
+      data: temperatures[index],
+      borderColor: colors[index],
+      fill: false // Não preenche abaixo da linha
+    }))
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Clima Médio dos Destinos Favoritos"
+    },
+    legend: {
+      position: "bottom"
+    },
+    scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true, // Eixo Y começa no zero
+              callback: function(value) { 
+                return value + "°C"; // Adiciona "°C" aos valores do eixo Y
+              }
+            }
+          }]
+        }
+      }
+    }
+  
+);
+
+ </script>
+ 
+</main>
+
+<footer>
+   <div class="container">
+     <div class="links">
+       <a href="#sobre">Sobre Nós</a>
+       <a href="#contato">Contato</a>
+       <a href="#termos">Termos de Uso</a>
+       <a href="#privacidade">Política de Privacidade</a>
+     </div>
+     <div class="social-icons">
+       <a href="#"><i class="fab fa-facebook-f"></i></a>
+       <a href="#"><i class="fab fa-twitter"></i></a>
+       <a href="#"><i class="fab fa-instagram"></i></a>
+       <a href="#"><i class="fab fa-linkedin-in"></i></a>
+     </div>
+     <div class="copyright">
+       &copy; 2024 DataNexus Tech. Todos os direitos reservados.
+     </div>
+   </div>
+ </footer>
+     
+    
+</body>
+</html>

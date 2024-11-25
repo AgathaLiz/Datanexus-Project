@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/comprar_passagem.css">
+    <title>Passagem Compra</title>
+</head>
+<body>
+
+    <script src="Script/comprar_passagem.js"></script>
+    <header>
+
+        <ul id="lista">
+
+            <li class="lista_header" id="list_home"><button type="button" class="botao"><a href="index.html" id="home" class="link">Home</a></button></li>
+            <li class="lista_header"><button type="button" class="botao"><a href="Buscar_Voos.html" id="viagens" class="link">Viagens</a></button></li>
+            <li class="lista_header"><button type="button" class="botao"><a href="Seguro.html" id="seguro" class="link">Seguro</a></button></li>
+            <li class="lista_header"><button type="button" class="botao"><a href="Login.html" id="login" class="link">Login</a></button></li>
+            <li class="lista_header"><button type="button" class="botao"><a href="Fale_Conos.html" id="faleConosco" class="link">Fale Conosco</a></button></li>
+
+        </ul>
+    </header>
+
+    <main>
+
+        <div class="container_compra">
+
+            <!--Formulário de Comprar Passagem-->
+            <div id="form_compra">
+            
+
+                <form id="comprar_passagem" class="formularios">
+
+                    <h1 id="dados_pessoais" class="titulo_form">Dados Pessoais</h1>
+
+                    <input type="text" class="input_form" id="nome" placeholder="Primeiro Nome" required>
+                    <p id="aviso">Caso o primeiro nome seja composto, informar os dois.</br>
+                        Ex: Maria Clara.
+                    </p>
+
+                    <input type="text" class="input_form" id="sobrenome" placeholder="Sobrenome" required>
+                    <input type="text" class="input_form" id="n_rg" placeholder="Número do Rg" required>
+                    <input type="text" class="input_form" id="n_cpf" placeholder="CPF" required>
+                    <input type="tel" class="input_form" id="telefone" placeholder="Telefone" required>
+                    <input type="tel" class="input_form" id="emer_tel" placeholder="Telefone de Emergência" required>
+                    <input type="email" class="input_form" id="email" placeholder="Email válido para contato" required>
+
+                </form>
+
+                <form id="passagem" class="formularios">
+
+                    <h1 id="dados_passagem" class="titulo_form">Dados da Passagem</h1>
+
+                    
+
+                </form>
+
+                
+            </div>
+
+            
+
+        </div>
+
+        <div class="container_botoes">
+
+            <div id="botoes">
+
+        <button type="submit" id="comprar" class="botao_compra">Comprar Passagem</button>
+        <button id="trocar-passagem" onclick="trocarPassagem()" class="botao_compra">Trocar Passagem</button>
+
+            </div>
+
+        </div>
+
+        <div class="detalhes-passagem">
+    <img id="imagem-passagem" alt="Imagem da Passagem">
+    <h2 id="nome-lugar"></h2>
+    <p id="preco"></p>
+</div>
+
+
+
+    </main>
+    <footer></footer>
+    
+</body>
+</html>

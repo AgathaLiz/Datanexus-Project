@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/login.css">
+    
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+
+  
+    
+    <title>Login</title>
+ 
+</head>
+<body>
+
+  <header>
+
+    <ul id="lista">
+
+        <li class="lista_header" id="list_home"><button type="button" class="botao"><a href="index.html" id="home" class="link">Home</a></button></li>
+        <li class="lista_header"><button type="button" class="botao"><a href="Buscar_Voos.html" id="viagens" class="link">Viagens</a></button></li>
+        <li class="lista_header"><button type="button" class="botao"><a href="Seguro.html" id="seguro" class="link">Seguro</a></button></li>
+        <li class="lista_header"><button type="button" class="botao"><a href="Login.html" id="login" class="link">Login</a></button></li>
+        <li class="lista_header"><button type="button" class="botao"><a href="Fale_Conos.html" id="faleConosco" class="link">Fale Conosco</a></button></li>
+
+    </ul>
+</header>
+
+  <main>
+    
+    <div class='container'>
+      <div class='card'>
+        <h1> Entrar </h1>
+          
+      <div class='label-float'>
+    <input type= 'text' id= 'usuario' paceholder=''required>
+          <label id="labelUsuario" for='usuario'>Usuário</label>
+      </div>
+            
+      <div class='label-float'>
+    <input type='password' id='senha' paceholder=''required>
+              <label id="labelSenha" for='usuario'>Senha</label>
+                </div>
+        
+        <div class='justify-center'>
+          <button  type="button" onclick="entrar()">Entrar</button>
+        </div>
+
+        <div id="msgError" class="msg-error"></div>
+        
+        <div class='justify-center'>
+          <hr> 
+        </div>
+       
+        <p> Não tem uma conta?
+          <a href='cadastro.html'> Cadastre-se </a>
+        </p>
+        
+         </div>
+       </div>
+       
+
+      </main>
+      <p>Você está nesta tela há:<onput id="result"></onput></p>
+
+      <footer>
+
+       
+    
+       
+
+  </footer>
+  
+  
+  <script src="Script/logins.js"></script>
+ 
+
+</body>
+</html>

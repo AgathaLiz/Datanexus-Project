@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="Css/cadastro.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    
+    <title>Cadastro</title>
+</head>
+<body>
+  
+  
+
+
+  <main>
+
+   
+    <form>
+    <div class='container'>
+      <div class='card'>
+        <h1> Cadastrar </h1>
+  
+        <div id='msgError'></div>
+        <div id='msgSuccess'></div>
+        
+        <div class='label-float'>
+          <input type='text' id='nome' paceholder='' max="50"  required>
+          <label id="labelNome" for='nome'>Nome</label>
+        </div>
+  
+        <div class='label-float'>
+          <input type='text' id='usuario' paceholder='' required>
+          <label id="labelUsuario" for='usuario'>Usuário</label>
+        </div>
+  
+        <div class='label-float'>
+          <input type='email' id='email' paceholder='' required>
+          <label id="labelEmail" for='email'>E-mail</label>
+        </div>
+  
+        <div>
+          <p><b>Sexo:</b>
+  
+          </p>
+          <input type='radio' id='feminino' name='genero' value='feminino' required>
+          <label id="labelFeminino" for='feminino'>Feminino</label>
+  
+          <input type='radio' id='masculino' name='genero' value='masculino' required>
+          <label id="labelMasculino" for='masculino'>Masculino</label>
+  
+          <input type='radio' id='outro' name='genero' value='outro' required>
+          <label id="labelOutro" for='outro'>Outro</label>
+          
+        </div>
+  
+        <br></br>
+  
+        <div class='inputBox'>
+          <label id="labelData_de_nascimento" for='data_nascimento'>Data de Nascimento:</label>
+          <input type='date' nome='data_nascimento' id='data_nascimento' class='inputUser' required>
+        </div>
+  
+        <div class='label-float'>
+          <input type='password' id='senha' paceholder='' required>
+          <label id="labelSenha" for='senha'>Senha</label>
+        </div>
+  
+        <div class='label-float'>
+          <input type='password' id='confirmSenha' paceholder='' required>
+          <label id="labelconfirmSenha" for='confirmSenha'>Confirme sua senha</label>
+        </div>
+  
+        <div class='justify-center'>
+          <button onclick='cadastrar()'; onclick='limiteLetras()'>Cadastrar-se</button>
+        </div>
+  
+      </div>
+
+      <p id="paragLimite">
+    </div>
+
+  </form>
+
+ 
+
+      </main>
+
+
+
+
+
+
+ 
+  
+  
+  <script src="Script/cadastro.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ 
+   
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/Fale_Conosco.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+   
+    
+    <title>Central de Ajuda</title>
+
+</head>
+
+
+
+<body> 
+
+    <header>
+
+        <ul id="lista">
+
+            <li class="lista_header" id="list_home"><button type="button" class="botao"><a href="index.html" id="home" class="link">Home</a></button></li>
+            <li class="lista_header"><button type="button" class="botao"><a href="Buscar_Voos.html" id="viagens" class="link">Viagens</a></button></li>
+            <li class="lista_header"><button type="button" class="botao"><a href="Seguro.html" id="seguro" class="link">Seguro</a></button></li>
+            <li class="lista_header"><button type="button" class="botao"><a href="Login.html" id="login" class="link">Login</a></button></li>
+            <li class="lista_header"><button type="button" class="botao"><a href="Fale_Conos.html" id="faleConosco" class="link">Fale Conosco</a></button></li>
+
+        </ul>
+    </header>
+    
+
+  
+    <main>
+
+        <div class="container">
+
+            <div class="form_box">
+
+                <h2 class="title">Fale Conosco</h2>
+
+                <div id="welcome">
+
+                    <h2 id="agradecimento_mensagem">Agradecemos por escolher a DataNexus <span id="username"></span></h2>
+                  </br>
+                    <button id="logout">Enviar outra dúvida</button>
+                  </div>
+
+                <form id="name-form" name="myform" action="" method="get">
+
+                    <input type="text" id="name" max="10" name="name" placeholder="Seu nome" required>
+                    <input type="email" id="email"  max="10" name="email" oninput="minuscula()" placeholder="Seu E-mail" required>
+                    <input type="tel" id="phone"  max="10" name="telefone" placeholder="Seu Telefone"  required style="margin-right: 16px ;">
+
+                    <input type="text" list="opcao" placeholder="Assuntos" multiple/>
+
+                        <datalist id="opcao" >
+
+                            <option value="Passagem" >Passagem</option>
+                            <option value="Hotel">Hotel</option>
+                            <option value="Pagamento">Pagamento</option>
+                            <option value="Outros">Outros</option>
+                        </datalist>
+
+                    
+
+                    <textarea name="message" placeholder="Digite sua mensagem"></textarea>
+
+                    <button  type="submit"  id="logout", id="envio"> Envie sua Mensagem</button>
+                    
+                    
+                       
+                </form>
+            </div>
+        </div>
+
+      
+        
+        
+
+    </main>
+
+   
+
+        
+    <script src="Script/Fale_conosco.js"></script>
+
+</body>
+</html>

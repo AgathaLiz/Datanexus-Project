@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/index_mobile.css">
+    <link rel="stylesheet" href="Css/index.css">
+    <script src="Script/index.js" defer></script>
+    <title>Página Inicial</title>
+</head>
+
+<body id="corpo">
+    <header>
+
+        <ul id="lista">
+
+           
+            <li class="lista_header"><button type="button" class="botao"><a href="viagem.html" id="viagens" class="link">Viagens</a></button></li>
+            <li class="lista_header"><button type="button" class="botao"><a href="Seguro.html" id="seguro" class="link">Seguro</a></button></li>
+            <li class="lista_header" id="login2"><button type="button" class="botao"><a href="Login.html" id="login" class="link">Login</a></button></li>
+            <li class="lista_header"><button type="button" class="botao"><a href="Fale_Conos.html" id="faleConosco" class="link">Fale Conosco</a></button></li>
+
+        </ul>
+    </header>
+
+    <main>
+
+        <div id="primeira_parte">
+        <div class="container_menu">
+
+            <nav class="menu"><!--Linha roxa-->
+                <ul id="menu_ul">
+                    <li id=""> <a href="#" class="icone"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M17 19H19V11H13V19H15V13H17V19ZM3 19V4C3 3.44772 3.44772 3 4 3H18C18.5523 3 19 3.44772 19 4V9H21V19H22V21H2V19H3ZM7 11V13H9V11H7ZM7 15V17H9V15H7ZM7 7V9H9V7H7Z"></path></svg>Hotéis </a></li>
+                    <li class="icones"> <a href="#" class="icone"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M14 8.94737L22 14V16L14 13.4737V18.8333L17 20.5V22L12.5 21L8 22V20.5L11 18.8333V13.4737L3 16V14L11 8.94737V3.5C11 2.67157 11.6716 2 12.5 2C13.3284 2 14 2.67157 14 3.5V8.94737Z"></path></svg>Voos</a></li>
+                    <li class="icones"> <a href="#" class="icone"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M17 20H7V21C7 21.5523 6.55228 22 6 22H4C3.44772 22 3 21.5523 3 21V12H2V8H3V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V8H22V12H21V21C21 21.5523 20.5523 22 20 22H18C17.4477 22 17 21.5523 17 21V20ZM5 5V12H19V5H5ZM7.5 18C8.32843 18 9 17.3284 9 16.5C9 15.6716 8.32843 15 7.5 15C6.67157 15 6 15.6716 6 16.5C6 17.3284 6.67157 18 7.5 18ZM16.5 18C17.3284 18 18 17.3284 18 16.5C18 15.6716 17.3284 15 16.5 15C15.6716 15 15 15.6716 15 16.5C15 17.3284 15.6716 18 16.5 18Z"></path></svg>Ônibus</a></li>
+                    <li class="icones"> <a href="html/Seguro.html" class="icone"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M9 13V16H15V13H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V13H9ZM11 11H13V14H11V11ZM7 5V2C7 1.44772 7.44772 1 8 1H16C16.5523 1 17 1.44772 17 2V5H21C21.5523 5 22 5.44772 22 6V11H15V9H9V11H2V6C2 5.44772 2.44772 5 3 5H7ZM9 3V5H15V3H9Z"></path></svg>Seguro Viagem</a></li>
+                    <li class="icones"> <a href="#" class="icone"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>Top Oferta</a></li>
+                </ul>       
+            </nav>
+
+        </div>
+
+        <div class="container_escolher_passagem">
+            <section id="parte-azul">
+                <div id="parte-branca">
+                    <div id="passagem">
+                        <h1 id="passagem_h1">PASSAGENS AÉREAS</h1>
+        
+                        <div class="toggle-button">
+                            <button class="toggle-option active" id="ida-e-volta" type="button" onclick="alternarExibicao('ida-e-volta')">Ida e Volta</button>
+                            <button class="toggle-option" id="somente-ida" type="button" onclick="alternarExibicao('somente-ida')">Somente Ida</button>
+                        </div>
+                    </div>
+        
+                    <script>
+                        // Definir a função no escopo global para que ela seja acessível a ambos os botões
+                        document.addEventListener("DOMContentLoaded", function () {
+                            let bnt_volta_e_vida = document.getElementById("ida-e-volta");
+                            let bnt_ida = document.getElementById("somente-ida");
+                            let retorno = document.querySelector(".campo_return-date");
+        
+                            // Verificar se o elemento de retorno existe
+                            if (retorno) {
+                                // Função para alternar a exibição da parte "Quando irá voltar?"
+                                window.alternarExibicao = function (tipo) {
+                                    if (tipo === 'somente-ida') {
+                                        // Ocultar a parte de "Quando irá voltar?"
+                                        retorno.style.display = "none";
+                                        // Remover a classe 'active' do botão "Ida e Volta"
+                                        bnt_volta_e_vida.classList.remove("active");
+                                        // Adicionar a classe 'active' ao botão "Somente Ida"
+                                        bnt_ida.classList.add("active");
+                                    } else {
+                                        // Mostrar a parte de "Quando irá voltar?"
+                                        retorno.style.display = "block";
+                                        // Remover a classe 'active' do botão "Somente Ida"
+                                        bnt_ida.classList.remove("active");
+                                        // Adicionar a classe 'active' ao botão "Ida e Volta"
+                                        bnt_volta_e_vida.classList.add("active");
+                                    }
+                                };
+                            } else {
+                                console.error("Elemento de retorno não encontrado.");
+                            }
+                        });
+                    </script>
+        
+                    <form id="formulario">
+                        <fieldset class="form-container">
+                            <div class="campo">
+                                <label>De onde está saindo?</label>
+                                <input type="text" name="origem" id="origem">
+                            </div>
+                            
+                            <div class="campo">
+                                <label>Onde está indo?</label>
+                                <input type="text" name="destino" id="destino">
+                            </div>
+                        
+                            <div class="campo">
+                                <label for="ida">Quando irá sair?</label>
+                                <input type="date" name="ida" id="ida">
+                            </div>
+                        
+                            <div class="campo">
+                                <div class="campo_return-date">
+                                    <label for="return-date">Quando irá voltar?</label>
+                                    <input type="date" name="sobrenome" id="return-date-field">
+                                </div>
+                            </div>
+                        
+                            <div class="campo">
+                                <label>Quantos passageiros?</label>
+                                <div class="passageiros-container">
+                                    <input type="text" name="passageiros" id="passageiros" readonly>
+                                    <button type="button" id="decrementar" class="hidden">-</button>
+                                    <button type="button" id="incrementar" class="hidden">+</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="botao"><a href="Buscar_Voos.html">Buscar Voos</a></button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        
+
+    <div id="segunda_parte">
+
+<!--carossel-->
+    <!--Slider 1-->
+
+    <div class="carrosel">
+
+        
+
+        <div class="container-slider">
+
+            <h2 id="viagens_populares">As Viagens mais Populares</h2>
+
+            <button class="button prev-button" id="prev-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"></path></svg></button>
+            <div class="container-images">
+
+                <img src="Logos//new york.jpg" alt="new york image" class="slider on">
+                <img src="Logos/paris.jpg" alt="new york image" class="slider">
+                <img src="Logos/grecia.jpg" alt="new york image" class="slider">
+                <img src="Logos/praia.jpg" alt="new york image" class="slider">
+            </div>
+
+            <button class="button" id="next-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg></button>
+        </div>
+
+    </div>
+
+<!--fim do carrosel-->
+
+        <div class="container_viagens">
+
+            <div class="paineis">
+
+                <div id="viagem01", class="viagens" onclick="armazenarInformacoes('viagem01')">
+                  <span class="preco">R$220,00</span>
+                    <a href="comprar_passagem.html"><img src="Logos/2.jpg"></a>
+                  <h2 class="descricao">Japão</h2>
+
+                   
+
+                </div>
+
+                <div id="viagem02", class="viagens" onclick="armazenarInformacoes('viagem02')">
+                   <span class="preco">R$220,00</span>
+                    <a href="comprar_passagem.html"><img src="Logos/taj mafa.jpg"></a>
+                    <h2 class="descricao">Brasil</h2>
+                </div>
+
+                <div id="viagem03", class="viagens" onclick="armazenarInformacoes('viagem03')">
+                  <span class="preco">Mais barato</span>
+                    <a href="comprar_passagem.html"><img src="Logos/new york 2.jpg"></a>
+                    <h2 class="descricao">EUA</h2>
+                </div>
+
+                <div id="viagem04", class="viagens" onclick="armazenarInformacoes('viagem04')">
+                  <span class="preco">R$230,00</span>
+                    <a href="comprar_passagem.html"><img src="Logos/estambul.jpg"></a>
+                    <h2 class="descricao">Australia</h2>
+                </div>
+
+                <div id="viagem05", class="viagens" onclick="armazenarInformacoes('viagem05')">
+                  <span class="preco">Mais caro</span>
+                    <a href="comprar_passagem.html"><img src="Logos/japao mount fuji.jpg"></a>
+                    <h2 class="descricao">México</h2>
+                </div>
+               
+                <div id="viagem06", class="viagens" onclick="armazenarInformacoes('viagem06')">
+                    <span class="preco">R$220,00</span>
+                    <a href="comprar_passagem.html"><img src="Logos/londres.jpg"></a>
+                    <h2 class="descricao">Espanha</h2>
+                </div>
+
+                <div id="viagem07", class="viagens" onclick="armazenarInformacoes('viagem07')">
+                    <span class="preco">Mais em conta</span>
+                    <a href="comprar_passagem.html"><img src="Logos/rio de janeiro.jpg"></a>
+                    <h2 class="descricao">Portugal</h2>
+                </div>
+
+                <div id="viagem08", class="viagens" onclick="armazenarInformacoes('viagem08')">
+                    <span class="preco">Mais em conta</span>
+                    <a href="comprar_passagem.html"><img src="Logos/roma.jpg"></a>
+                    <h2 class="descricao">França</h2>
+                </div>
+
+                <div id="viagem09", class="viagens" onclick="armazenarInformacoes('viagem09')">
+                    <span class="preco">Mais caro</span>
+                    <a href="comprar_passagem.html"><img src="Logos/sydney australia.jpg"></a>
+                    <h2 class="descricao">Noruega</h2>
+                </div>
+
+                <div id="viagem010", class="viagens" onclick="armazenarInformacoes('viagem010')">
+                    <span class="preco">R$220,00</span>
+                    <a href="comprar_passagem.html"><img src="Logos/busan.jpg"></a>
+                    <h2 class="descricao">Nepal</h2>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="container_more_information"> 
+
+            <div class="sobre_datanexus">
+
+                <img src="Logos/Sem_fundo/logo_principal.png">
+
+                <p>A DataNexus surgiu como um projeto nas aulas de PW (Programção Web) do 1º ano do curso de Desenvolvimento de Sistemas. 
+                    A Datanexus não é somente um site de comprar viagens, mas também de garantir a confiança e a comunicação a todo momento.
+                </p>
+
+                
+
+
+            </div>
+
+            <div class="fale_conosco">
+
+                <img src="Logos/Sem_fundo/Fale conosco.png">
+                <p>Fale conosco</p>
+
+              
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+    </main>
+    <footer></footer>
+
+   
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/Grafico_Clima.css"  >  
+</head>
+    <body>
+        <html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:800px"></canvas>
+
+<script>
+    const xValues = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov"];
+    const destinations = ["Paris", "Rio de Janeiro", "Madrid", "Nova York", "Roma", "Buenos Aires"];
+    const temperatures = [
+      [8, 9, 13, 17, 21, 24,26, 26, 22, 17, 11, 8 ], // Paris
+      [30, 31, 30, 28, 26, 25, 25, 26, 26, 27, 28, 29 ], // Rio
+      [10, 12, 16, 18, 23, 28, 32, 32, 26, 19, 13, 10], // Madrid
+      [4, 6, 10, 17, 22, 27, 30, 29, 25, 18, 12,7], // Nova York
+      [13, 14, 17, 19, 24, 29, 32, 32, 27, 23, 17, 13], // Roma
+      [29, 28, 26, 22, 19, 16, 15, 17, 19, 22, 25, 28] // Buenos Aires
+    ];
+    const colors = ["red", "green", "yellow", "darkblue", "brown", "lightblue"]; // Cores para cada destino
+    
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: destinations.map((dest, index) => ({
+          label: dest,
+          data: temperatures[index],
+          borderColor: colors[index],
+          fill: false // Não preenche abaixo da linha
+        }))
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Clima Médio dos Destinos Favoritos"
+        },
+        legend: {
+          position: "bottom"
+        },
+        scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true, // Eixo Y começa no zero
+                  callback: function(value) { 
+                    return value + "°C"; // Adiciona "°C" aos valores do eixo Y
+                  }
+                }
+              }]
+            }
+          }
+        }
+      
+    );
+    </script>
+    </body>
