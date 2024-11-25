@@ -1,0 +1,222 @@
+*, ::after, ::before {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Header*/
+
+#lista {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: center;
+    background-color: #8973FA;
+}
+
+.lista_header {
+
+    text-decoration: none;
+    list-style: none;
+    margin: 20px 50px 20px 50px;
+  
+}
+
+#list_home {
+    
+    margin-right: 300px;
+}
+
+.link{
+
+    text-decoration: none;
+    color:white;
+    
+
+}
+
+.link:hover {
+
+    color: #8973FA;
+    cursor: pointer;
+}
+
+
+.botao {
+
+    background-color: #8973FA;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    width: 125px;
+    height: 30px;
+}
+
+.botao:hover {
+
+    background-color: white;
+    
+}
+
+main {
+
+    margin-top: 10px;
+}
+
+main > .container {
+
+    background: #7d61b8;
+}
+
+body, textarea {
+
+    font-family: sans-serif;
+}
+
+main > .container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    margin-bottom: 200px;
+    border-radius: 20px;
+}
+
+.form_box {
+
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    border-radius: 8px;
+    width: 700px;
+}
+
+.form_box .title {
+
+    padding: 24px 32px;
+    font-size: 30px;
+    border-bottom: thin solid #F2F2F2;
+    color: #1F0740;
+
+}
+
+.form_box  form {
+
+    
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 32px;
+}
+
+.form_box input, .form_box textarea, .form_box datalist {
+
+    width: calc(50% - 8px);
+    height: 48px;
+    border-radius: 8px;
+    border: thin solid #999;
+    padding-left: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    
+}
+
+.form_box input:first-child {
+
+    margin-right: 16px;
+}
+
+.form_box input [name=telefone] {
+
+    margin-left: 16px;
+    width: 100%;
+}
+
+
+
+
+.form_box input [name=subject] {
+
+    width: 100%;
+    margin-left: 16px;
+}
+
+
+.form_box textarea {
+
+    width: 100%;
+    height: 180px;
+    padding: 16px;
+}
+
+
+
+.botoes_de_ir_e_voltar {
+
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 60px;
+    margin-top: 10px;
+    width: 100px;
+    height: 48px;
+    border-radius: 50px;
+    background-color: #1F0740;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+    margin-bottom: 20px;
+
+}
+
+.form_box button {
+
+    display: block;
+    border: none;
+    outline: none;
+    width: 180px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #1F0740;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#logout {
+
+    display: block;
+    border: none;
+    outline: none;
+    width: 180px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: #1F0740;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+#agradecimento_mensagem {
+
+    padding-bottom: 20px;
+}
+
+.form_box button:hover {
+
+    background-color: #7d61b8;
+}

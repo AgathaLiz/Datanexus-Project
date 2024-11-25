@@ -1,0 +1,170 @@
+* {
+
+    margin: 0;
+}
+
+/*Header*/
+
+#lista {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: center;
+    background-color: #8973FA;
+}
+
+.lista_header {
+
+    text-decoration: none;
+    list-style: none;
+    margin: 20px 50px 20px 50px;
+  
+}
+
+#list_home {
+    
+    margin-right: 300px;
+}
+
+.link{
+
+    text-decoration: none;
+    color:white;
+    
+
+}
+
+.link:hover {
+
+    color: #8973FA;
+    cursor: pointer;
+}
+
+
+.botao {
+
+    background-color: #8973FA;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    width: 125px;
+    height: 30px;
+}
+
+.botao:hover {
+
+    background-color: white;
+    
+}
+
+.container_compra {
+
+    display: flex;
+    margin: 20px;
+
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#form_compra {
+
+    display: flex;
+    margin: 20px;
+    background-color: #8973fa5d;
+    border-radius: 20px;
+}
+
+#detalhes-passagem{
+    flex:1;
+    text-align: center;
+}
+
+#imagem-passagem{
+    max-width: 100%;
+    height: auto;
+}
+
+.formularios {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px;
+    margin-right: 200px ;
+    
+}
+
+/*Dados Pessoais*/
+
+.titulos_form {
+
+    text-align: center;
+    margin: 20px;
+}
+
+.input_form {
+
+    margin: 10px;
+    height: 45px;
+    width: 500px;
+    border: 1px black solid;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.input_form:hover {
+
+    border-color: #8973FA;
+   
+}
+
+#aviso {
+
+    margin-left: 10px;
+    text-align: left;
+    font-size: 15px;
+}
+
+/*Dados da Passagem*/
+
+
+/*Botao de Comprar*/
+
+#botoes {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.botao_compra{
+display: flex;
+width: 500px;
+height: 50px;
+margin: 20px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+border: 1px black solid;
+border-radius: 10px;
+cursor: pointer;
+
+}
+
+#comprar:hover {
+
+    background-color: rgb(170, 224, 170);
+}
+
+#trocar-passagem:hover {
+
+    background-color: rgb(211, 154, 154);
+}

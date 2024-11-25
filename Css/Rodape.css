@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+* {
+
+    width: auto;
+    height: auto;
+}
+
+ul.lista_geral > li {
+
+    padding-top: 0px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 5px;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    height: 100px;
+}
+
+ul.links_outros > li {
+
+    text-indent: -9999;
+    width: 90px;
+    display: inline;
+}
+
+footer > .parte_do_pagamento > ul{
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto; 
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+    
+}
+
+footer > .parte_do_siga > ul{
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto; 
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+    
+}
+
+
+
+.rodape_nav{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 30px;
+ 
+}
+
+.lista_maislinks {
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto; 
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+    
+
+}
+
+.links {
+
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 45px;
+    padding-bottom: 5px;
+    display: inline;
+}
+
+.parte_do_pagamento {
+    padding-top: 50px;
+}
+
+
+
+.parag_rodape {
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+/**Imagem e Informações dela**/
+
+.parte_de_informacoes{
+
+   
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.informacoes_dtn {
+
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+footer > .parte_de_informacoes > img{
+    padding: 10px ;
+    height: 80px;
+    width: auto;
+    text-align: center;
+   
+}
+
+
+
+/**aside**/
+
+#faq1 {
+    border-top: 10px;
+    border-style: solid;
+    border-color: var(--cor1);
+    border-radius: 5px;
+    font-family: var(--font-padrao);
+}
+
+#faq2 {
+    border-top: 10px;
+    border-style: solid;
+    border-color: var(--cor1);
+    border-radius: 5px;
+    font-family: var(--font-padrao);
+}
+
+#faq3 {
+    border-top: 10px;
+    border-style: solid;
+    border-color: var(--cor1);
+    border-radius: 5px;
+    font-family: var(--font-padrao);
+}
+
+aside > p {
+
+    background-color: #b69bf241;
+    border-radius: 10px;
+}
+
+.parag_rodape {
+
+    font-family: var(--font-padrao);
+    color: var(--cinza);
+}
+
+/**fim do aside**/
+
+/**começo do rodapé**/
+
+
+footer {
+    border-top: var(--cinza);
+    
+}
+
+.informacoes_dtn {
+
+    color: #1F0740;
+}
+
+.links > a{
+    text-decoration: none;
+    color:var(--cor3);
+    transition-duration: 0.5s;
+    font-family: var(--font-destaque);
+    width: 60px;
+    
+}
+
+footer > a:hover {
+    background-color: #b69bf22d;
+}
+
+.parte_do_pagamento {
+
+    background-color: #b69bf241;
+    border-radius: 10px;
+}
+
+#formasdepagamento{
+
+    font-family:var(--font-destaque) ;
+    color: var(--cinza);
+}
+
+/**formas de pagamento**/
+
+#bb {
+
+    background: url(../../HTML/Imagens/bb.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#bradesco {
+
+    background: url(../../HTML/Imagens/bradescoteste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#caixa {
+
+    background: url(../../HTML/Imagens/caixa.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#elo {
+
+    background: url(../../HTML/Imagens/elo.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#itau {
+
+    background: url(../../HTML/Imagens/itau.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#mastercard {
+
+    background: url(../../HTML/Imagens/mastercardteste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#pix {
+
+    background: url(../..//IHTMLmagens/pix.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#santader {
+
+    background: url(../../HTML/Imagens/santander.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#visa {
+
+    background: url(../../HTML/Imagens/visa.teste.webp) no-repeat;
+    width: 85px;
+    height: 55px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#sigatitulo {
+
+    font-family:var(--font-destaque) ;
+    color: var(--cinza);
+
+}
+
+#instagram {
+
+    background: url(../../HTML/Imagens/logo-insta.webp) no-repeat;
+    width: 100px;
+    height: 50px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#facebook {
+
+    background: url(../../HTML/Imagens/logo-facebook.webp) no-repeat;
+    width: 100px;
+    height: 50px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#twitter {
+
+    background: url(../../HTML/Imagens/logo-twitter.webp) no-repeat;
+    width: 100px;
+    height: 50px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#tiktok {
+
+    background: url(../../HTML/Imagens/logo-tiktok.webp) no-repeat;
+    width: 100px;
+    height: 50px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#youtube {
+
+    background: url(../../HTML/Imagens/logo-youtube.webp) no-repeat;
+    width: 100px;
+    height: 50px;
+    color: transparent;
+    text-shadow: none;
+}
+
+.links_outros > a {
+    display: inline-block;
+}
